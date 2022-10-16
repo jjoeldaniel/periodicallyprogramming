@@ -4,9 +4,12 @@ COLOR PALETTE
 #95A3B3 Cadet Grey
 #6EEB83 Light Green
 #343434 - dark gray - almost black
+whitesmoke
 */
 
-/* Font -> https://fonts.googleapis.com/css?family=Roboto */
+/* H1 Font -> https://fonts.googleapis.com/css?family=Roboto */
+/* H2 Font -> https://fonts.googleapis.com/css?Roboto+Mono */
+/* H3 Font -> https://fonts.google.com/noto/specimen/Noto+Sans */
 
 
 /* Global styles
@@ -17,7 +20,6 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  
   body {
     margin: 0;
     padding: 0;
@@ -28,18 +30,17 @@ html {
   img {
     width: 300px;
   }
-  a {
-    /* color: ; */
-  }
   a:hover {
     text-decoration: none;
   }
   h1 {
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 5em;
     line-height: 1;
   }
   h2 {
     font-size: 1.25em;
+    font-family: 'Roboto Mono', monospace;
   }
   header h2 {
     font-size: 2em;
@@ -55,9 +56,11 @@ html {
     padding: 60px 0;
   }
   h3 {
+    font-family: 'Noto Sans', serif;
     margin-bottom: 0;
   }
   .item-details h3 + p {
+  
     font-style: italic;
   }
   .item-details h3 ~ p {
@@ -75,8 +78,6 @@ html {
   /* Profile
   ------------------------------------*/
   header {
-    /* background: ; */
-    /* color: ; */
     background-color: #2B304F;
     color: whitesmoke;
   }
@@ -85,14 +86,9 @@ html {
   /* Projects
   ------------------------------------*/
   .projects {
-    /* background: ; */
-  }
-  .projects a {
-    /* color: ; */
+    background-color: whitesmoke;
   }
   .projects .btn {
-    /* color: ; */
-    /* background: ; */
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
@@ -103,7 +99,6 @@ html {
   .projects .btn:hover {
     background-color: #6EEB83;
     color: black;
-    /* background: ; */
   }
   .project-item {
     overflow: hidden;
@@ -127,8 +122,6 @@ html {
   /* Contact Info
   ------------------------------------*/
   footer {
-    /* background: ; */
-    /* color: ; */
     background-color: #343434;
     color: whitesmoke;
   }
@@ -139,8 +132,8 @@ html {
   .contact-list a {
     padding: 15px;
     display: inline-block;
-    /* color: ; */
-    color: whitewhsmoke;
+    text-decoration: none;
+    color: whitesmoke;
   }
   .contact-list a:hover {
     color: #6EEB83;
@@ -157,7 +150,6 @@ html {
     float: left;
     margin-right: 20px;
   }
-
   .job-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
