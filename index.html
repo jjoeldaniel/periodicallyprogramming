@@ -12,39 +12,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joel's Portfolio</title>
         <link rel="stylesheet" href="styles.css?v=1">
+        <script src="script.js"></script>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 
-        <!-- JavaScript -->
-        <script> 
-
-            // Dark Mode is off by default
-            let dark = false;
-
-            function dark_mode() {
-                document.body.classList.toggle("projects-dark-mode")
-                let buttons = document.getElementsByClassName("btn");
-                dark = !dark;
-
-                if (dark) {
-                    document.getElementById("toggle").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
-
-                    for (let i = 0; i < buttons.length; i++) {
-                        buttons[i].style.color = "#000000"; 
-                    }
-                }
-                else {
-                    document.getElementById("toggle").src= "https://raw.githubusercontent.com/jjoeldaniel/resume/main/img/dark-mode-button.png";
-
-                    for (let i = 0; i < buttons.length; i++) {
-                        buttons[i].style.color = "#FFFFFF"; 
-                    }
-                }
-            }
-        </script>
     </head>
 
     <body>
