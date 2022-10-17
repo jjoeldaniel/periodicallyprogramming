@@ -5,7 +5,7 @@ COLOR PALETTE
 #6EEB83 Light Green
 #2ea44f Dark Green
 #343434 - dark gray - almost black
-whitesmoke
+#f5f5f5 - whitesmoke
 */
 
 /* 
@@ -28,6 +28,7 @@ html {
     font-family: Roboto, serif;
     font-size: 18px;
     line-height: 1.5;
+    background-color: #f5f5f5;
   }
   img {
     width: 300px;
@@ -82,7 +83,7 @@ html {
   ------------------------------------*/
   header {
     background-color: #2B304F;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
   #dark-mode-button {
     position: absolute;
@@ -106,7 +107,7 @@ html {
     border-radius: 4px;
     display: inline-block;
     background-color: #95A3B3;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
   .projects .btn:hover {
     background-color: #6EEB83;
@@ -139,7 +140,7 @@ html {
   ------------------------------------*/
   footer {
     background-color: #343434;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
   .contact-list {
     list-style-type: none;
@@ -149,7 +150,7 @@ html {
     padding: 15px;
     display: inline-block;
     text-decoration: none;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
   .contact-list a:hover {
     color: #6EEB83;
