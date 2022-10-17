@@ -80,7 +80,7 @@ html {
   /* Dropdown
   ------------------------------------*/
   .dropdown {
-    position: fixed;
+    position: absolute;
     display: inline-block;
     top: 0%;
     left: 0%;
@@ -145,12 +145,6 @@ html {
   }
   #light:hover {
     opacity: 0;
-  }
-  .dot {
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
   }
   
   /* Projects
