@@ -95,6 +95,8 @@ html {
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
   }
+
+  /* Dark Mode Toggle */
   #dark-mode-button:hover {
     background-color: #2ea44f;
   }
