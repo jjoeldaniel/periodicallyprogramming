@@ -232,6 +232,12 @@ html {
   .education p {
     width: 60%;
   }
+  #third-list {
+    padding-left: 40%;
+  }
+  #third-button {
+    padding-left: 40%;
+  }
 }
 
 @media screen and (max-width:749px){

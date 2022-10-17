@@ -36,13 +36,17 @@ function init() {
 
 // Toggle Dark Mode
 function dark_mode() {
-    document.body.classList.toggle("projects-dark-mode")
+    let element = document.getElementById('projects');
 
     // to light
-    if (dark) {
+    if (dark) { 
         dark = false;
         localStorage.setItem("dark_mode", "false");
         document.getElementById("dark-mode-button").src= "https://raw.githubusercontent.com/jjoeldaniel/resume/main/img/dark-mode-button.png";
+
+        document.body.style.backgroundColor= "#f5f5f5";
+        document.body.style.color= "#343434";
+
         console.log("dark mode: false");
     }
     // to dark
@@ -50,6 +54,10 @@ function dark_mode() {
         dark = true;
         localStorage.setItem("dark_mode", "true");
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
+
+        document.body.style.backgroundColor= "#343434";
+        document.body.style.color= "#f5f5f5";
+
         console.log("dark mode: true");
     }
 }
