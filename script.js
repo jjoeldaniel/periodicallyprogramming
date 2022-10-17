@@ -21,9 +21,6 @@ function init() {
     if (dark) {
         document.body.classList.toggle("projects-dark-mode")
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.color = "#FFFFFF"; 
-        }
     }
 
     console.log("page ready");
@@ -32,28 +29,19 @@ function init() {
 // Toggle Dark Mode
 function dark_mode() {
     document.body.classList.toggle("projects-dark-mode")
-    let buttons = document.getElementsByClassName("btn");
 
     // to light
     if (dark) {
         dark = false;
         localStorage.setItem("dark_mode", "false");
-
         document.getElementById("dark-mode-button").src= "https://raw.githubusercontent.com/jjoeldaniel/resume/main/img/dark-mode-button.png";
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.color = "#000000"; 
-        }
         console.log("dark mode: false");
     }
     // to dark
     else {
         dark = true;
         localStorage.setItem("dark_mode", "true");
-
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.color = "#FFFFFF"; 
-        }
         console.log("dark mode: true");
     }
 }
