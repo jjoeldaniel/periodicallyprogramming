@@ -45,8 +45,3 @@ function dark_mode() {
         console.log("dark mode: true");
     }
 }
-
-// Center buttons on mobile
-function center_buttons() {
-
-}
