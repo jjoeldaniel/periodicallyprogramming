@@ -16,6 +16,17 @@ function init() {
     else if (localStorage.getItem("dark_mode") === "false") {
         dark = false;
     }
+
+    // initialize dark mode
+    if (dark) {
+        document.body.classList.toggle("projects-dark-mode")
+        document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.color = "#FFFFFF"; 
+        }
+    }
+
+    console.log("page ready");
 }
 
 // Toggle Dark Mode
@@ -25,22 +36,24 @@ function dark_mode() {
 
     // to light
     if (dark) {
-        document.getElementById("dark-mode-button").src= "https://raw.githubusercontent.com/jjoeldaniel/resume/main/img/dark-mode-button.png";
         dark = false;
         localStorage.setItem("dark_mode", "false");
 
+        document.getElementById("dark-mode-button").src= "https://raw.githubusercontent.com/jjoeldaniel/resume/main/img/dark-mode-button.png";
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.color = "#000000"; 
         }
+        console.log("dark mode: false");
     }
     // to dark
     else {
-        document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
         dark = true;
         localStorage.setItem("dark_mode", "true");
 
+        document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.color = "#FFFFFF"; 
         }
+        console.log("dark mode: true");
     }
 }
