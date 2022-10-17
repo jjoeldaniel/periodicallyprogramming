@@ -139,8 +139,8 @@ html {
   }
   #dark-mode-button {
     position: absolute;
-    top: 3%;
-    right: 3%;
+    top: 1%;
+    right: 1%;
     width: 5%;
   }
   #light:hover {
@@ -225,7 +225,9 @@ html {
     justify-content: center;
   }
   #dark-mode-button {
+    width: 4%;
     padding: 0.4%;
+    position: fixed;
   }
   .education p {
     width: 60%;
@@ -253,6 +255,11 @@ html {
   }
   body {
     text-align: center;
+  }
+  #dark-mode-button {
+    top: 1%;
+    right: 2%;
+    width: 8%;
   }
   .education h2 {
     text-align: center;
