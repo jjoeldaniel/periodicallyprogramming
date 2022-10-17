@@ -84,29 +84,21 @@ html {
     background-color: #2B304F;
     color: whitesmoke;
   }
-  #dark-mode-button {
+  .dark-mode-button {
     position: absolute;
     top: 3%;
     right: 3%;
-    color: white;
-    background-color: #95A3B3;
-    border: 1px solid rgba(27, 31, 35, .15);
-    border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-    box-sizing: border-box;
+    width: 5%;
   }
-
-  /* Dark Mode Toggle */
-  #dark-mode-button:hover {
-    background-color: #2ea44f;
+  #light:hover {
+    opacity: 0;
   }
-  
   
   /* Projects
   ------------------------------------*/
   .projects-dark-mode {
     background-color: #343434;
-    color: whitesmoke;
+    color: #f5f5f5;
   }
   .projects .btn {
     text-decoration: none;
@@ -129,9 +121,6 @@ html {
   .project-item h3 {
     margin-top: 0;
   }
-  #last-project {
-    text-align: center;
-  }
   
   /* Education
   ------------------------------------*/
@@ -139,6 +128,7 @@ html {
     background-color: #95A3B3;
     background-position: top right;
     padding-bottom: 100px;
+    color: black;
   }
   .education p {
     width: 60%;
@@ -185,7 +175,7 @@ html {
     display: flex;
     justify-content: center;
   }
-  #dark-mode-button {
+  .dark-mode-button {
     padding: 0.4%;
   }
 }
@@ -205,8 +195,5 @@ html {
   }
   img {
     width: 200px;
-  }
-  #dark-mode-button {
-    padding: 2%;
   }
 }
