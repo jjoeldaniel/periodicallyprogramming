@@ -17,6 +17,14 @@ function init() {
         dark = false;
     }
 
+    // Hide dropdown for mobile
+    if (window.matchMedia("(max-width: 749px)").matches) {
+        console.log("mobile");
+        const element = document.getElementById('dropbtn');
+        element.style.display = 'none';
+    }
+    else console.log("not mobile");
+
     // initialize dark mode
     if (dark) {
         document.body.classList.toggle("projects-dark-mode")

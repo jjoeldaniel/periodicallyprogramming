@@ -86,7 +86,7 @@ html {
     left: 0%;
     text-align: center;
   }
-  .dropbtn {
+  #dropbtn {
     background-color: #95A3B3;
     color: black;
     padding: 16px;
