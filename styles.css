@@ -197,4 +197,16 @@ html {
   img {
     width: 200px;
   }
+  ul {
+    text-align: left;
+  }
+  body {
+    text-align: center;
+  }
+  .education h2 {
+    text-align: center;
+  }
+  .education {
+    text-align: left;
+  }
 }
