@@ -183,10 +183,6 @@ html {
     padding-bottom: 100px;
     color: black;
   }
-  .education p {
-    width: 60%;
-  }
-  
   
   /* Contact Info
   ------------------------------------*/
@@ -231,6 +227,9 @@ html {
   #dark-mode-button {
     padding: 0.4%;
   }
+  .education p {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width:749px){
@@ -260,5 +259,8 @@ html {
   }
   .education {
     text-align: left;
+  }
+  .education p {
+    width: 'none';
   }
 }
