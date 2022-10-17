@@ -146,6 +146,12 @@ html {
   #light:hover {
     opacity: 0;
   }
+  .dot {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
   
   /* Projects
   ------------------------------------*/
@@ -207,7 +213,7 @@ html {
 
 /* Responsive
 ------------------------------------*/
-@media screen and (min-width:750px){
+@media screen and (min-width:750px) {
   header, footer {
     text-align: center;
   }
@@ -240,7 +246,7 @@ html {
   }
 }
 
-@media screen and (max-width:749px){
+@media screen and (max-width:749px) {
   h1 {
     font-size: 2em;
     line-height: 0.9;
