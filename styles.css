@@ -84,7 +84,7 @@ html {
     background-color: #2B304F;
     color: whitesmoke;
   }
-  .dark-mode-button {
+  #dark-mode-button {
     position: absolute;
     top: 3%;
     right: 3%;
@@ -175,7 +175,7 @@ html {
     display: flex;
     justify-content: center;
   }
-  .dark-mode-button {
+  #dark-mode-button {
     padding: 0.4%;
   }
 }
