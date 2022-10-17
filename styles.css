@@ -118,6 +118,10 @@ html {
     background-color: #6EEB83;
     color: black;
   }
+  .projects li {
+    list-style: none;
+    padding-bottom: 0.25%;
+  }
   .project-item {
     overflow: hidden;
   }
