@@ -130,6 +130,9 @@ html {
   .project-item h3 {
     margin-top: 0;
   }
+  #last-project {
+    text-align: center;
+  }
   
   /* Education
   ------------------------------------*/
