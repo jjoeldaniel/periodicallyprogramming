@@ -242,7 +242,7 @@ html {
 
 @media screen and (max-width:749px) {
   h1 {
-    font-size: 2em;
+    font-size: 4em;
     line-height: 0.9;
     margin-bottom: 20px;
   }
