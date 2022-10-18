@@ -253,6 +253,10 @@ html {
   .contact-list a {
     padding: 5px;
   }
+  .contact-list {
+    text-align: center;
+    padding-right: 2%;
+  }
   img {
     width: 200px;
   }
