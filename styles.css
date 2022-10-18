@@ -286,4 +286,7 @@ html {
   .education p {
     width: 'none';
   }
+  .dropdown {
+    visibility: hidden;
+  }
 }
