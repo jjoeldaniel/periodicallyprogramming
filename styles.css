@@ -238,6 +238,12 @@ html {
   #third-button {
     padding-left: 40%;
   }
+  .grow { 
+    transition: all .2s ease-in-out; 
+    }
+  .grow:hover {
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (max-width:749px) {
