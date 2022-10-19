@@ -2,6 +2,7 @@ window.onload = init;
 let dark = false;
 
 function init() {
+    console.time("init time");
 
     // dark mode button listener
     document.getElementById("dark-mode-button").addEventListener("click", dark_mode);
@@ -25,6 +26,7 @@ function init() {
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
     }
 
+    console.timeEnd("init time");
     console.log("page ready");
 }
 
