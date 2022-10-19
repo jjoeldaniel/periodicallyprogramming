@@ -46,8 +46,6 @@ function dark_mode() {
         // change background colors
         document.body.style.backgroundColor= "#f5f5f5";
         document.body.style.color= "#343434";
-
-        console.log("dark mode: false");
     }
     // to dark
     else {
@@ -62,7 +60,6 @@ function dark_mode() {
         // change background colors
         document.body.style.backgroundColor= "#343434";
         document.body.style.color= "#f5f5f5";
-
-        console.log("dark mode: true");
     }
+    console.log("dark mode toggled");
 }
