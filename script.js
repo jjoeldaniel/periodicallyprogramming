@@ -65,7 +65,6 @@ function dark_mode() {
         // switch button icon
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
 
-        // #181818
         // change background colors
         document.body.style.backgroundColor= "#181818";
         document.body.style.color= "#f5f5f5";
