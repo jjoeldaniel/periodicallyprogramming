@@ -32,6 +32,9 @@ html {
   img {
     width: 300px;
   }
+  a {
+    color: #f5f5f5;
+  }
   a:hover {
     text-decoration: none;
     color: #6EEB83;
@@ -44,6 +47,12 @@ html {
   h2 {
     font-size: 1.25em;
     font-family: 'Roboto Mono', monospace;
+  }
+  header {
+    padding: 15% 0;
+  }
+  header h1 {
+    font-size: 9em;
   }
   header h2 {
     font-size: 2em;
@@ -76,59 +85,26 @@ html {
     border-bottom: none;
   }
 
-  /* Dropdown
+  /* Menu
   ------------------------------------*/
-  .dropdown {
+  .menu {
     position: absolute;
     display: inline-block;
-    top: 0%;
-    left: 0%;
+    top: 1%;
+    left: 1%;
     text-align: center;
-  }
-  #dropbtn {
-    background-color: #95A3B3;
-    color: black;
+    min-width: 80px;
     padding: 16px;
-    font-size: 16px;
-    min-width: 150px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
   }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f5f5f5;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+  .menu a {
     text-decoration: none;
-    display: block;
   }
-  .dropdown-content a:hover {
-    background-color: #6EEB83
+  .menu a:hover {
+    color: #6EEB83;
   }
-
-  @keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
-  }
-  .dropdown:hover .dropdown-content {
-    animation: growDown 300ms ease-in-out forwards;
-    transform-origin: top center;
-    display: block;
-  }
-  
   
   /* Profile
   ------------------------------------*/
@@ -149,7 +125,7 @@ html {
   /* Projects
   ------------------------------------*/
   .projects-dark-mode {
-    background-color: #343434;
+    background-color: #181818;
     color: #f5f5f5;
   }
   .projects .btn {
@@ -177,16 +153,16 @@ html {
   /* Education
   ------------------------------------*/
   .education {
-    background-color: #95A3B3;
+    background-color: #2B304F;
     background-position: top right;
     padding-bottom: 100px;
-    color: black;
+    color: #f5f5f5;
   }
   
   /* Contact Info
   ------------------------------------*/
   footer {
-    background-color: #343434;
+    background-color: #181818;
     color: #f5f5f5;
   }
   .contact-list {
@@ -248,6 +224,12 @@ html {
     line-height: 0.9;
     margin-bottom: 20px;
   }
+  header h1 {
+    font-size: 4em;
+  }
+  header h2 {
+    font-size: 180%;
+  }
   h2 {
     font-size: 1.2em;
     line-height: 1;
@@ -282,7 +264,7 @@ html {
   .education p {
     width: 'none';
   }
-  .dropdown {
+  .menu {
     visibility: hidden;
   }
 }
