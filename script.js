@@ -1,6 +1,12 @@
 window.onload = init;
 let dark = false;
 
+/**
+ * Initializes site settings
+ * 
+ * 
+ * Adds listeners and pulls dark mode setting from local storage
+ */
 function init() {
     console.time("init time");
 
@@ -30,7 +36,9 @@ function init() {
     console.log("page ready");
 }
 
-// toggle dark mode
+/**
+ * Toggles site dark mode
+ */
 function dark_mode() {
 
     // to light
