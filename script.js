@@ -30,6 +30,10 @@ function init() {
     if (dark) {
         document.body.classList.toggle("projects-dark-mode")
         document.getElementById("dark-mode-button").src= "https://github.com/jjoeldaniel/resume/blob/main/img/sun.png?raw=true";
+
+        document.getElementById("github").style.color="#f5f5f5";
+        document.getElementById("email").style.color="#f5f5f5";
+        document.getElementById("linkedin").style.color="#f5f5f5";
     }
 
     console.timeEnd("init time");
