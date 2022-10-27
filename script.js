@@ -54,6 +54,10 @@ function dark_mode() {
         // change background colors
         document.body.style.backgroundColor= "#f5f5f5";
         document.body.style.color= "#343434";
+        
+        document.getElementById("github").style.color="#343434";
+        document.getElementById("email").style.color="#343434";
+        document.getElementById("linkedin").style.color="#343434";
     }
     // to dark
     else {
@@ -68,6 +72,10 @@ function dark_mode() {
         // change background colors
         document.body.style.backgroundColor= "#181818";
         document.body.style.color= "#f5f5f5";
+
+        document.getElementById("github").style.color="#f5f5f5";
+        document.getElementById("email").style.color="#f5f5f5";
+        document.getElementById("linkedin").style.color="#f5f5f5";
     }
     console.log("dark mode toggled");
 }
