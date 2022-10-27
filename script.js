@@ -13,9 +13,19 @@ function init() {
     // dark mode button listener
     document.getElementById("dark-mode-button").addEventListener("click", dark_mode);
 
-    // default dark mode to false
+    // create local storage
     if (localStorage.getItem("dark_mode") === null) {
-        localStorage.setItem("dark_mode", "false");
+
+        // check preference
+        let mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
+        let isDarkMode = mediaQueryObj.matches;
+
+        if (isDarkMode) {
+            localStorage.setItem("dark_mode", "true");
+        }
+        else {
+            localStorage.setItem("dark_mode", "false");
+        }
     }
     
     // grab stored dark mode setting
