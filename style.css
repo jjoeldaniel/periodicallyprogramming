@@ -28,6 +28,7 @@ header button {
     font-size: 110px;
     font-weight: bold;
     align-self: center;
+    margin: auto;
     background-color: #273043;
     color: #F7F4F3;
 }
