@@ -1,7 +1,15 @@
+/* 
+Color Palette
+#EDE6E3 - Isabelline
+#F06449 - Orange Soda
+#273043 - Space Cadet
+F7F4F3 cultured
+*/
+
 * {
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: #f5f5f5;
+    background-color: #F7F4F3;
     font-family: 'Noto Sans', serif;
 }
 
@@ -9,28 +17,28 @@ header {
     text-align: center;
     font-size: 48px;
     padding: 21% 0;
-    background-color: #7286A0;
+    background-color: #F06449;
 }
 header button {
     font-family: 'Ubuntu', sans-serif;
     border: none;
     font-size: 110px;
     font-weight: bold;
-    background-color: #7286A0;
-    color: white;
+    background-color: #F06449;
+    color: #F7F4F3;
 }
 
 #section-label {
     font-weight: bold;
     text-align: center;
     border-top-width: 50px;
-    border-color: #f5f5f5;
+    border-color: #F7F4F3;
     border-top-style: solid;
 }
 
 .projects-container {
     max-width: 1000px;
-    background-color: #f5f5f5;
+    background-color: #F7F4F3;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -88,7 +96,7 @@ transform: scale(1.1);
 }
 
 #projects {
-    background-color: #f5f5f5;
+    background-color: #F7F4F3;
 }
 
 footer {
@@ -96,18 +104,18 @@ footer {
 }
 .footer-container {
     margin-top: 100px;
-    background-color: #7286A0;
+    background-color: #273043;
     padding-bottom: 60px;
     padding-top: 50px;
 }
 .footer-container h2 {
     font-weight: bold;
-    color: white;
-    background-color: #7286A0;
+    color: #F7F4F3;
+    background-color: #273043;
     padding-bottom: 25px;
 }
 .footer-container ul {
-    background-color: #7286A0;
+    background-color: #273043;
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -115,11 +123,11 @@ footer {
     width: 500px;
   }
   .footer-container a {
-    background-color: #7286A0;
+    background-color: #273043;
     padding: 15px;
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: #F7F4F3;
   }
   .footer-container a:hover {
     color: #6EEB83;
