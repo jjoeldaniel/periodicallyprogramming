@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    font-family: 'Noto Sans', serif;
+}
+
+header {
+    text-align: center;
+    font-size: 48px;
+    padding: 21% 0;
+    background-color: #7286A0;
+}
+header button {
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    font-size: 110px;
+    font-weight: bold;
+    background-color: #7286A0;
+    color: white;
+}
+
+#section-label {
+    font-weight: bold;
+    text-align: center;
+    border-top-width: 50px;
+    border-color: #f5f5f5;
+    border-top-style: solid;
+}
+
+.projects-container {
+    max-width: 1000px;
+    background-color: #f5f5f5;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project {
+    color: black;
+    font-size: 18px;
+    margin: 100px;
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.project-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 50px;
+}
+.project-container img {
+    height: 250px;
+}
+
+.project-info-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.project-info-container ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.project-info-container .btn {
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #7286A0;
+    color: #f5f5f5;
+}
+.project-info-container .btn:hover {
+    background-color: #6EEB83;
+    color: black;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+.grow:hover {
+transform: scale(1.1);
+}
+
+#projects {
+    background-color: #f5f5f5;
+}
+
+footer {
+    text-align: center;
+}
+.footer-container {
+    margin-top: 100px;
+    background-color: #7286A0;
+    padding-bottom: 60px;
+    padding-top: 50px;
+}
+.footer-container h2 {
+    font-weight: bold;
+    color: white;
+    background-color: #7286A0;
+    padding-bottom: 25px;
+}
+.footer-container ul {
+    background-color: #7286A0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    width: 500px;
+  }
+  .footer-container a {
+    background-color: #7286A0;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-container a:hover {
+    color: #6EEB83;
+  }
+
+  .grow { 
+    transition: all .2s ease-in-out; 
+    }
+  .grow:hover {
+    transform: scale(1.1);
+  }
+
+@media screen and (max-width:749px) {
+    img {
+        width: 200px;
+    }
+}
