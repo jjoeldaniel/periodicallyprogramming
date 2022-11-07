@@ -157,6 +157,9 @@ footer {
         flex-direction: column;
         max-width: fit-content;
     }
+    .project-container img {
+        width: 200px;
+    }
 
     .project {
         margin: auto;
@@ -170,7 +173,8 @@ footer {
         margin-top: 5%;
     }
 
-    img {
-        width: 200px;
+    .footer-container ul {
+        flex-direction: column;
+        width: fit-content;
     }
 }
