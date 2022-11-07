@@ -146,6 +146,9 @@ footer {
   }
 
 @media screen and (max-width:749px) {
+    header {
+        border-width: 0;
+    }
     header button {
         font-size: 150%;
     }
