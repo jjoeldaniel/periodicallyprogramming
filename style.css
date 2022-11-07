@@ -1,9 +1,8 @@
 /* 
 Color Palette
-#EDE6E3 - Isabelline
+#F7F4F3 - Cultured
 #F06449 - Orange Soda
 #273043 - Space Cadet
-F7F4F3 cultured
 */
 
 * {
@@ -80,7 +79,7 @@ header button {
     text-decoration: none;
     padding: 8px;
     border-radius: 6px;
-    background-color: #7286A0;
+    background-color: #273043;
     color: #f5f5f5;
 }
 .project-info-container .btn:hover {
