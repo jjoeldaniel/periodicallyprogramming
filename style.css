@@ -173,6 +173,9 @@ footer {
         margin-top: 5%;
     }
 
+    .footer-container {
+        margin-top: 50px;
+    }
     .footer-container ul {
         flex-direction: column;
         width: fit-content;
