@@ -13,17 +13,22 @@ Color Palette
 }
 
 header {
+    border-width: 8px;
+    border-color: #F7F4F3;
+    border-style: solid;
     text-align: center;
     font-size: 48px;
-    padding: 21% 0;
-    background-color: #F06449;
+    height: 100vh;
+    display: grid;
+    background-color: #273043;
 }
 header button {
     font-family: 'Ubuntu', sans-serif;
     border: none;
     font-size: 110px;
     font-weight: bold;
-    background-color: #F06449;
+    align-self: center;
+    background-color: #273043;
     color: #F7F4F3;
 }
 
@@ -103,18 +108,18 @@ footer {
 }
 .footer-container {
     margin-top: 100px;
-    background-color: #273043;
+    background-color: #F06449;
     padding-bottom: 60px;
     padding-top: 50px;
 }
 .footer-container h2 {
     font-weight: bold;
     color: #F7F4F3;
-    background-color: #273043;
+    background-color: #F06449;
     padding-bottom: 25px;
 }
 .footer-container ul {
-    background-color: #273043;
+    background-color: #F06449;
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -122,7 +127,7 @@ footer {
     width: 500px;
   }
   .footer-container a {
-    background-color: #273043;
+    background-color: #F06449;
     padding: 15px;
     display: inline-block;
     text-decoration: none;
