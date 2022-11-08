@@ -67,6 +67,10 @@ header button {
     column-gap: 50px;
 }
 .project-container img {
+    height: 20vh;
+    width: 20vh;
+}
+.projects-3 img {
     height: 25vh;
 }
 
@@ -171,6 +175,10 @@ footer {
 
     .project-info-container h3 {
         margin-top: 5%;
+    }
+
+    .projects-3 .project-container img {
+        width: 45%;
     }
 
     .footer-container {
