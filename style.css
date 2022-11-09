@@ -151,12 +151,14 @@ footer {
     color: #6EEB83;
   }
 
-  .grow { 
-    transition: all .2s ease-in-out; 
-    }
-  .grow:hover {
+@media screen and (min-width:750px) {
+    .grow { 
+        transition: all .2s ease-in-out; 
+        }
+    .grow:hover {
     transform: scale(1.1);
-  }
+    }
+}
 
 @media screen and (max-width:749px) {
     .landing-page-container {
