@@ -151,13 +151,15 @@ footer {
     color: #6EEB83;
   }
 
-@media screen and (min-width:750px) {
-    .grow { 
-        transition: all .2s ease-in-out; 
-        }
-    .grow:hover {
-    transform: scale(1.1);
+  .grow { 
+    transition: all .2s ease-in-out; 
     }
+  .grow:hover {
+    transform: scale(1.1);
+  }
+
+@media screen and (min-width:750px) {
+
 }
 
 @media screen and (max-width:749px) {
@@ -165,7 +167,7 @@ footer {
         border-width: 0;
     }
     .landing-page-container .landing-1 {
-        font-size: 10vh;
+        font-size: 100px;
     }
 
     .project-container {
