@@ -13,24 +13,31 @@ Color Palette
 }
 
 header {
+    background-color: #273043;
+}
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: 100vh;
     border-width: 8px;
     border-color: #F7F4F3;
     border-style: solid;
-    text-align: center;
-    font-size: 48px;
-    height: 100vh;
-    display: grid;
-    background-color: #273043;
 }
-header button {
+.landing-page-container .landing-1 {
+    margin-top: 30vh;
+    flex: 1;
     font-family: 'Ubuntu', sans-serif;
     border: none;
     font-size: 110px;
     font-weight: bold;
     align-self: center;
-    margin: auto;
     background-color: transparent;
     color: #F7F4F3;
+}
+.landing-page-container .landing-2 {
+    flex: 1;
+    background-color: transparent;
 }
 
 #section-label {
