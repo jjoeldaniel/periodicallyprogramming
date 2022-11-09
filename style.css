@@ -20,9 +20,6 @@ header {
     flex-direction: column;
     background-color: transparent;
     height: 100vh;
-    border-width: 8px;
-    border-color: #F7F4F3;
-    border-style: solid;
 }
 .landing-page-container .landing-1 {
     margin-top: 30vh;
@@ -163,9 +160,6 @@ footer {
 }
 
 @media screen and (max-width:749px) {
-    .landing-page-container {
-        border-width: 0;
-    }
     .landing-page-container .landing-1 {
         font-size: 70px;
     }
