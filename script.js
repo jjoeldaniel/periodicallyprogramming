@@ -1,7 +1,6 @@
 window.onload = init;
 
 function init() {
-    // document.getElementById('')
     document.getElementById("start-btn").addEventListener("click", scroll);
 }
 
