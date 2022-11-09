@@ -159,10 +159,10 @@ footer {
   }
 
 @media screen and (max-width:749px) {
-    header {
+    .landing-page-container {
         border-width: 0;
     }
-    header button {
+    .landing-page-container .landing-1 {
         font-size: 150%;
     }
 
