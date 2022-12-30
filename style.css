@@ -161,6 +161,10 @@ footer {
         font-size: 70px;
     }
 
+    #section-label {
+        margin-bottom: 50px;
+    }
+
     .project-container {
         flex-direction: column;
         max-width: fit-content;
