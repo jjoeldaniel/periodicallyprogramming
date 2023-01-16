@@ -1,7 +1,4 @@
 {
-    "functions": {
-        "index.py"
-    },
     "routes": [
         {
             "src": "/(.*)",
