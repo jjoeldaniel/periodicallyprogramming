@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="shortcut icon" href="img/avalon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='avalon.ico') }}">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <script>
+        window.onload = init;
+
+        function init() {
+            document.getElementById("start-btn").addEventListener("click", scroll);
+        }
+
+        function scroll() {
+            document.getElementById("section-label").scrollIntoView({ behavior: 'smooth', block: 'start'});
+        }
+    </script>
 
     <title>Periodically Programming</title>
 </head>
@@ -19,7 +30,7 @@
         <div class="landing-page-container">
             <button class="landing-1 grow">Joel R.</button>
 
-            <input type="image" id="start-btn" class="landing-2 grow" src="img/double-down-arrows.svg" />
+            <input type="image" id="start-btn" class="landing-2 grow" src="{{ url_for('static', filename='double-down-arrows.svg') }}" />
         </div>
     </header>
 
@@ -28,7 +39,7 @@
     <div id="projects" class="projects-container">
 
         <div class="projects-1 project-container">
-            <img src="img/discord-logo.png" alt="floating island">
+            <img src="{{ url_for('static', filename='discord-logo.png') }}" alt="floating island">
         
             <div class="project-info-container">
                 <h3>Discord Bot</h3>
@@ -46,7 +57,7 @@
         </div>
 
         <div class="projects-2 project-container">
-            <img src="img/genius-logo.png" alt="ace card">
+            <img src="{{ url_for('static', filename='genius-logo.png') }}" alt="ace card">
             
             <div class="project-info-container">
                 <h3>Genius API Wrapper</h3>
@@ -63,7 +74,7 @@
         </div>
 
         <div class="projects-3 project-container">
-            <img src="img/canvas-logo.png" alt="canvas logo">
+            <img src="{{ url_for('static', filename='canvas-logo.png') }}" alt="canvas logo">
 
             <div class="project-info-container">
                 <h3>Canvas-Discord Integration</h3>
@@ -90,7 +101,7 @@
             <ul>
                 <li><a href="https://github.com/jjoeldaniel" target="_blank">GitHub</a></li>
                 <li><a href="mailto:joeldanielrico@gmail.com">joeldanielrico@gmail.com</a></li>
-                <li><a href="https://github.com/jjoeldaniel/periodicallyprogramming/blob/main/img/Joel_redacted_resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">Resume</a></li>
                 <li><a href="https://www.linkedin.com/in/joeldanielrico/" target="_blank">LinkedIn</a></li>
             </ul>
         </div>
