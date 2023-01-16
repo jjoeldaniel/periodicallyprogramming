@@ -1,7 +1,8 @@
 {
     "version": 2,
     "builds": [
-        { "src": "*.py", "use": "@vercel/python" }
+        { "src": "*.py", "use": "@vercel/python" },
+        { "src": "/static*", "use": "@vercel/static"}
     ],
     "routes": [
         { "src": "/", "dest": "index.py" },
