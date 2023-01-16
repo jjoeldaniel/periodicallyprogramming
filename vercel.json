@@ -1,4 +1,10 @@
 {
+    "functions": {
+        "index.py": {
+            "runtime": "python",
+            "handler": "index.app"
+        }
+    },
     "routes": [
         {
             "src": "/(.*)",
