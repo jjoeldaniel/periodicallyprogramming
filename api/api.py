@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Blueprint, request
 
-app = Flask(__name__)
+api = Blueprint('api', __name__)
 
-@app.route('/api')
-def api():
-    return 'API'
+@api.route('/api')
+def req():
+    user = request.args.get('user')
+    return f'Hello {user}'
