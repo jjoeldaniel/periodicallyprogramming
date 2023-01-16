@@ -1,7 +1,7 @@
 {
     "functions": {
         "index.py": {
-            "runtime": "python0.0.4"
+            "runtime": "python@0.0.4"
         }
     },
     "routes": [
