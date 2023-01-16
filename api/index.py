@@ -8,4 +8,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    from vercel import import run_lambda
+    run_lambda(app)
