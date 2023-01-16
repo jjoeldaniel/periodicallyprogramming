@@ -1,7 +1,6 @@
 {
     "functions": {
         "index.py": {
-            "runtime": "python"
         }
     },
     "routes": [
