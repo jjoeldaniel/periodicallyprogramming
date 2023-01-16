@@ -1,8 +1,7 @@
 {
     "functions": {
         "index.py": {
-            "runtime": "python0.0.4",
-            "handler": "index.app"
+            "runtime": "python0.0.4"
         }
     },
     "routes": [
