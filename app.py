@@ -7,6 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('<path:path>')
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
 def catch_all(path):
     return render_template('index.html')
