@@ -1,9 +1,12 @@
 from flask import Blueprint, jsonify
 
-about_me = Blueprint('about_me', __name__)
+# Import app from index.py
+from api.index import app
+
+# about_me = Blueprint('about_me', __name__)
 
 
-@about_me.route('/api/about_me')
+@app.route('/api/about_me')
 def show():
     return jsonify(
         {
