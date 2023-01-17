@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify
-from http.server import BaseHTTPRequestHandler
 
 about_me = Blueprint('about_me', __name__)
 
