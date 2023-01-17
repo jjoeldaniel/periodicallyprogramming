@@ -1,3 +1,10 @@
-venv/
-__pycache__/
+# Python
+**/__pycache__/
+/venv/
 *.env
+
+# Jetbrains
+.idea/
+
+# VSCode
+.vscode/
