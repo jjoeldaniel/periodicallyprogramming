@@ -10,3 +10,7 @@ def show():
             'name': 'Joel',
             'description': 'Thats me!'
         }), 200
+
+# Handler
+def handler(request):
+    return about_me(request)
