@@ -14,4 +14,5 @@ def index():
 
 @app.route('/api')
 def api():
-    return handler(request=request)
+    return jsonify({'status': 'success'}), 200
+    # return handler(request=request)
