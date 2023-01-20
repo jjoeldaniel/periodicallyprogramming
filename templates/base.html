@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='avalon.ico') }}">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <script>
+        window.onload = init;
+
+        function init() {
+            document.getElementById("start-btn").addEventListener("click", scroll);
+        }
+
+        function scroll() {
+            document.getElementById("section-label").scrollIntoView({ behavior: 'smooth', block: 'start'});
+        }
+    </script>
+
+    <title>Periodically Programming</title>
+</head>
+<body>
+    <header>
+        <div class="landing-page-container">
+            <button class="landing-1 grow">Joel R.</button>
+
+            <input type="image" id="start-btn" class="landing-2 grow" src="{{ url_for('static', filename='double-down-arrows.svg') }}" />
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+
+        <div class="footer-container">
+            <h2>Contact Me</h2>
+
+            <ul>
+                <li><a href="https://github.com/jjoeldaniel" target="_blank">GitHub</a></li>
+                <li><a href="mailto:joeldanielrico@gmail.com">joeldanielrico@gmail.com</a></li>
+                <li><a href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/joeldanielrico/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
+</html>
