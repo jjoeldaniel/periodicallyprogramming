@@ -8,6 +8,7 @@ app = Flask(__name__, template_folder='../templates', static_folder='../static')
 def index():
     return render_template('index.html')
 
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
