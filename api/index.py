@@ -21,6 +21,16 @@ def github():
     return redirect('https://github.com/jjoeldaniel')
 
 
+@app.route('/resume')
+def resume():
+    return redirect('https://www.periodicallyprogramming.com/static/resume.pdf')
+
+
+@app.route('/linkedin')
+def linkedin():
+    return redirect('https://www.linkedin.com/in/joeldanielrico')
+
+
 @app.route('/project')
 @app.route('/projects')
 def projects():
