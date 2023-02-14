@@ -9,9 +9,16 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/about')
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/project')
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 
 @app.route('/api/ping')
