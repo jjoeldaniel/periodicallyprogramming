@@ -26,6 +26,13 @@ def resume():
     return redirect('https://www.periodicallyprogramming.com/static/resume.pdf')
 
 
+@app.route('/source')
+@app.route('/sourcecode')
+@app.route('/source_code')
+def source():
+    return redirect('https://github.com/jjoeldaniel/periodicallyprogramming')
+
+
 @app.route('/linkedin')
 def linkedin():
     return redirect('https://www.linkedin.com/in/joeldanielrico')
