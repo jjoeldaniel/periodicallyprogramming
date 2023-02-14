@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 
-    <link rel="stylesheet" href=contact.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <style>
@@ -83,9 +83,9 @@
     <div>
       <h3 class="float-md-start mb-0">Periodically Programming</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/index">Home</a>
         <a class="nav-link fw-bold py-1 px-0" href="#">Projects</a>
-        <a class="nav-link fw-bold py-1 px-0 active" href="contact.html">Contact</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="#">Contact</a>
       </nav>
     </div>
   </header>
