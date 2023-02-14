@@ -121,8 +121,15 @@
           <div class="row row-cols-1 g-3">
             <div class="col">
               <div class="card shadow-sm bg-dark-subtle">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Trends Analysis</text></svg>
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="{{ url_for('static', filename='') }}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Trends Analysis</text></svg> -->
+                
+                <!-- Stretch img to use entire width -->
+                
+                <img src="{{ url_for('static', filename='data.jpg') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
+                
                 <div class="card-body">
+                  <h4 class="card-header text-dark">Trends Analysis</h4>
+
                   <p class="card-text text-dark">A collaborative project within CSUF ACM chapter that uses keyword extraction with KeyBERT to analyze user messages and cache extracted data in data structures for user requests, generating a JSON file used by GitHub actions to deliver content to ACM CSUF website.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -135,7 +142,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm bg-dark-subtle">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Discord Bot</text></svg>
+                <img src="{{ url_for('static', filename='avalon-logo.png') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
                 <div class="card-body">
                   <p class="card-text text-dark">A Discord bot that implements Spotify API to collect album, artist, and playlist info, allowing users to set notification phrases and using prepared statements in front-facing user interactions to prevent possible SQL injection attacks, with user settings stored in PostgreSQL and ElephantSQL.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -149,7 +156,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm bg-dark-subtle">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Genius API Wrapper</text></svg>
+                <img src="{{ url_for('static', filename='genius-logo.jpg') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
                 <div class="card-body">
                   <p class="card-text text-dark">A project that utilizes Requests HTTP library to communicate with Genius REST API, scraping the Genius website to parse song lyrics using Beautiful Soup, and currently maintained and hosting active releases on Python Package Index (PyPi), with GitHub workflows used to push releases to PyPi.</p>
                   <div class="d-flex justify-content-between align-items-center">
