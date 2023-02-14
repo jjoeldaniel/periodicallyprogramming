@@ -29,6 +29,11 @@
         user-select: none;
       }
 
+      h4 {
+        font-family: Noto Sans;
+        font-weight: bolder;
+      }
+
       .card-text {
         text-shadow: none;
       }
@@ -132,7 +137,7 @@
                 <img src="{{ url_for('static', filename='data.jpg') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
                 
                 <div class="card-body">
-                  <h4 class="card-header text-dark">Trends Analysis</h4>
+                  <h4 style="text-shadow: none; border: none; background-color: transparent;" class="card-header text-dark">Trends Analysis</h4>
 
                   <p class="card-text text-dark">A collaborative project within CSUF ACM chapter that uses keyword extraction with KeyBERT to analyze user messages and cache extracted data in data structures for user requests, generating a JSON file used by GitHub actions to deliver content to ACM CSUF website.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -148,6 +153,8 @@
               <div class="card shadow-sm bg-dark-subtle">
                 <img src="{{ url_for('static', filename='avalon-logo.png') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
                 <div class="card-body">
+                  <h4 style="text-shadow: none; border: none; background-color: transparent;" class="card-header text-dark">Discord Bot</h4>
+
                   <p class="card-text text-dark">A Discord bot that implements Spotify API to collect album, artist, and playlist info, allowing users to set notification phrases and using prepared statements in front-facing user interactions to prevent possible SQL injection attacks, with user settings stored in PostgreSQL and ElephantSQL.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -162,6 +169,8 @@
               <div class="card shadow-sm bg-dark-subtle">
                 <img src="{{ url_for('static', filename='genius-logo.jpg') }}" class="bd-placeholder-img card-img-top" width="100%"</img>
                 <div class="card-body">
+                  <h4 style="text-shadow: none; border: none; background-color: transparent;" class="card-header text-dark">Genius API Wrapper</h4>
+
                   <p class="card-text text-dark">A project that utilizes Requests HTTP library to communicate with Genius REST API, scraping the Genius website to parse song lyrics using Beautiful Soup, and currently maintained and hosting active releases on Python Package Index (PyPi), with GitHub workflows used to push releases to PyPi.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
