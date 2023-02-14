@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, redirect
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
@@ -13,6 +13,12 @@ def index():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/github')
+@app.route('/gh')
+def github():
+    return redirect('https://github.com/jjoeldaniel')
 
 
 @app.route('/project')
