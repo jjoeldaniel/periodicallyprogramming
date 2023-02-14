@@ -21,6 +21,10 @@ body {
   font-family: 'Noto Sans', serif;
 }
 
+.text-muted {
+  text-shadow: none;
+}
+
 .cover-container {
   max-width: 42em;
 }
