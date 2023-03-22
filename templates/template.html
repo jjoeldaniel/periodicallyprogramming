@@ -30,11 +30,12 @@
   </head>
   <body>
     <main class="container">
-      <nav class="container" style="font-family: 'Noto Sans', sans-serif">
-        <ul>
-          {% block nav %} {% endblock %}
+      <nav>
+        <div>
+          <p>periodicallyprogramming</p>
+        </div>
+        {% block nav %} {% endblock %}
       </nav>
-
       {% block content %} {% endblock %}
     </main>
 
