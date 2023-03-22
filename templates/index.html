@@ -1,81 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="periodicallyprogramming" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="periodicallyprogramming.com/index" />
-    <meta
-      property="og:image"
-      content="{{ url_for('static', filename='pfp.jpg') }}"
-    />
-    <meta property="og:description" content="Welcome to my digital resume!" />
-    <title>Periodically Programming</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Noto+Sans"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
-    <link rel="icon" href="{{ url_for('static', filename='avalon.ico') }}" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"
-    />
-    <title>Periodically Programming</title>
-  </head>
-  <body>
-    <main class="container">
-      <nav class="container" style="font-family: 'Noto Sans', sans-serif">
-        <ul>
-          <li>
-            <a
-              href="https://github.com/jjoeldaniel/periodicallyprogramming"
-              target="_blank"
-              ><strong>Periodically Programming</strong></a
-            >
-          </li>
-          <li style="padding-left: 30em"><strong>Home</strong></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
+{% extends "template.html" %} {% block content %}
+<hgroup style="font-family: 'Ubuntu', sans-serif">
+  <h1>Joel Daniel Rico</h1>
+  <h2>Aspiring Software Engineer</h2>
+</hgroup>
 
-      <hgroup style="font-family: 'Ubuntu', sans-serif">
-        <h1>Joel Daniel Rico</h1>
-        <h2>Aspiring Software Engineer</h2>
-      </hgroup>
+<p>
+  Welcome to my website! This serves as my digital portfolio and contains my
+  blog as well as all my projects
+</p>
 
-      <p>
-        Welcome to my website! This serves as my digital portfolio and contains
-        my blog as well as all my projects
-      </p>
-
-      <nav>
-        <details role="list">
-          <summary aria-haspopup="listbox" role="button">Theme</summary>
-          <ul role="listbox">
-            <li><a href="#" data-theme-switcher="auto">Auto</a></li>
-            <li><a href="#" data-theme-switcher="light">Light</a></li>
-            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-          </ul>
-        </details>
-      </nav>
-    </main>
-
-    <footer class="container">
-      Created with 💖 by
-      <a
-        style="padding-right: 50px"
-        href="https://github.com/jjoeldaniel"
-        class="text-white"
-        >jjoeldaniel</a
-      >
-    </footer>
-  </body>
-  <script src="/static/minimal-theme-switcher.js"></script>
-</html>
+<nav>
+  <details role="list">
+    <summary aria-haspopup="listbox" role="button">Theme</summary>
+    <ul role="listbox">
+      <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+      <li><a href="#" data-theme-switcher="light">Light</a></li>
+      <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+    </ul>
+  </details>
+</nav>
+{% endblock %}
