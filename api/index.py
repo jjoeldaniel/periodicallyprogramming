@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='../templates',
 
 @app.route('/')
 @app.route('/index')
-@app.rotue('/home')
+@app.route('/home')
 def index():
     """Our default routes of '/' and '/index'
     Return: The content we want to display to a user
