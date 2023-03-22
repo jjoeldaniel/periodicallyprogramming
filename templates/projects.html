@@ -1,102 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="periodicallyprogramming" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="periodicallyprogramming.com/index" />
-    <meta
-      property="og:image"
-      content="{{ url_for('static', filename='pfp.jpg') }}"
-    />
-    <meta property="og:description" content="Welcome to my digital resume!" />
-    <title>Periodically Programming</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Noto+Sans"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
-    <link rel="icon" href="{{ url_for('static', filename='avalon.ico') }}" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"
-    />
-    <title>Periodically Programming</title>
-  </head>
-  <body>
-    <main class="container">
-      <nav class="container" style="font-family: 'Noto Sans', sans-serif">
-        <ul>
-          <li>
-            <a
-              href="https://github.com/jjoeldaniel/periodicallyprogramming"
-              target="_blank"
-              ><strong>Periodically Programming</strong></a
-            >
-          </li>
-          <li style="padding-left: 30em">Home</li>
-          <li>
-            <a href="/projects"><strong>Projects</strong></a>
-          </li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
+{% extends "template.html" %} {% block content %}
+<hgroup style="font-family: 'Ubuntu', sans-serif">
+  <h1>Projects</h1>
+  <h2>A list of projects that I've worked on in the past!</h2>
+</hgroup>
 
-      <hgroup style="font-family: 'Ubuntu', sans-serif">
-        <h1>Projects</h1>
-        <h2>A list of projects that I've worked on in the past!</h2>
-      </hgroup>
+<article>
+  <h4>Trends Analysis</h4>
+  <p>
+    A collaborative project within CSUF ACM chapter that uses keyword extraction
+    with KeyBERT to analyze user messages and cache extracted data in data
+    structures for user requests, generating a JSON file used by GitHub actions
+    to deliver content to ACM CSUF website.
+  </p>
+  <small class="text-muted">January '23 - Present</small>
+</article>
 
-      <article>
-        <h4>Trends Analysis</h4>
-        <p>
-          A collaborative project within CSUF ACM chapter that uses keyword
-          extraction with KeyBERT to analyze user messages and cache extracted
-          data in data structures for user requests, generating a JSON file used
-          by GitHub actions to deliver content to ACM CSUF website.
-        </p>
-        <small class="text-muted">January '23 - Present</small>
-      </article>
+<article>
+  <h4>Discord Bot</h4>
+  <p>
+    A Discord bot that implements Spotify API to collect album, artist, and
+    playlist info, allowing users to set notification phrases and using prepared
+    statements in front-facing user interactions to prevent possible SQL
+    injection attacks, with user settings stored in PostgreSQL and ElephantSQL.
+  </p>
+  <small class="text-muted">May '22 - Present</small>
+</article>
 
-      <article>
-        <h4>Discord Bot</h4>
-        <p>
-          A Discord bot that implements Spotify API to collect album, artist,
-          and playlist info, allowing users to set notification phrases and
-          using prepared statements in front-facing user interactions to prevent
-          possible SQL injection attacks, with user settings stored in
-          PostgreSQL and ElephantSQL.
-        </p>
-        <small class="text-muted">May '22 - Present</small>
-      </article>
-
-      <article>
-        <h4>Genius API Wrapper</h4>
-        <p>
-          A project that utilizes Requests HTTP library to communicate with
-          Genius REST API, scraping the Genius website to parse song lyrics
-          using Beautiful Soup, and currently maintained and hosting active
-          releases on Python Package Index (PyPi), with GitHub workflows used to
-          push releases to PyPi.
-        </p>
-        <small class="text-muted">December '22 - Present</small>
-      </article>
-    </main>
-
-    <footer class="container">
-      Created with 💖 by
-      <a
-        style="padding-right: 50px"
-        href="https://github.com/jjoeldaniel"
-        class="text-white"
-        >jjoeldaniel</a
-      >
-    </footer>
-  </body>
-  <script src="/static/minimal-theme-switcher.js"></script>
-</html>
+<article>
+  <h4>Genius API Wrapper</h4>
+  <p>
+    A project that utilizes Requests HTTP library to communicate with Genius
+    REST API, scraping the Genius website to parse song lyrics using Beautiful
+    Soup, and currently maintained and hosting active releases on Python Package
+    Index (PyPi), with GitHub workflows used to push releases to PyPi.
+  </p>
+  <small class="text-muted">December '22 - Present</small>
+</article>
+{% endblock %}
