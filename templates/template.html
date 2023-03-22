@@ -32,17 +32,7 @@
     <main class="container">
       <nav class="container" style="font-family: 'Noto Sans', sans-serif">
         <ul>
-          <li>
-            <a
-              href="https://github.com/jjoeldaniel/periodicallyprogramming"
-              target="_blank"
-              ><strong>Periodically Programming</strong></a
-            >
-          </li>
-          <li style="padding-left: 30em"><strong>Home</strong></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+          {% block nav %} {% endblock %}
       </nav>
 
       {% block content %} {% endblock %}
