@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='../templates',
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
-def index():
+def home():
     """Our default routes of '/' and '/index'
     Return: The content we want to display to a user
     """
@@ -64,7 +64,7 @@ def catch_all(path):
     Return: A redirect to our index route
     """
 
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 
 if __name__ == '__main__':
