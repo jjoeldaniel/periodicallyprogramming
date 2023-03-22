@@ -39,14 +39,29 @@
       {% block content %} {% endblock %}
     </main>
 
-    <footer class="container">
-      Created with 💖 by
-      <a
-        style="padding-right: 50px"
-        href="https://github.com/jjoeldaniel"
-        class="text-white"
-        >jjoeldaniel</a
-      >
+    <footer
+      class="container"
+      style="display: flex; justify-content: space-between"
+    >
+      <div>
+        Created with 💖 by
+        <a
+          style="padding-right: 50px"
+          href="https://github.com/jjoeldaniel"
+          class="text-white"
+          >jjoeldaniel</a
+        >
+      </div>
+      <nav>
+        <details role="list">
+          <summary aria-haspopup="listbox" role="button">Theme</summary>
+          <ul role="listbox">
+            <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+          </ul>
+        </details>
+      </nav>
     </footer>
   </body>
   <script src="/static/minimal-theme-switcher.js"></script>
