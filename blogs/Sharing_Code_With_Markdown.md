@@ -8,7 +8,7 @@ This is specifically oriented towards use on Discord, however any site that supp
 
 Before anyone can dive into reviewing your code, it has to actually be readable and structured clearly.
 
-> This means not submitting this when asking for help
+<small>This means not submitting this when asking for help</small>
 
 ![code](https://ak.picdn.net/shutterstock/videos/24896750/thumb/12.jpg?ip=x480)
 
@@ -18,7 +18,7 @@ Instead of posting a wall of text, we can use these blocks to structure our code
 
 ### Example:
 
-<sub>In this case, the language is JSON, replace `json` with the actual language you are using</sub>
+<small>In this case, the language is JSON, replace `json` with the actual language you are using</small>
 
 `````
 ```json
