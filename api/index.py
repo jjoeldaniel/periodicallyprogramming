@@ -30,7 +30,7 @@ def blog_post(title=None):
     if title not in blog_posts:
         return redirect(url_for("blog_index"))
 
-    with open(f'../blogs/{title}.md') as f:
+    with open(f'./blogs/{title}.md') as f:
         markdown_content = f.read()
 
     html_content = markdown.markdown(markdown_content)
