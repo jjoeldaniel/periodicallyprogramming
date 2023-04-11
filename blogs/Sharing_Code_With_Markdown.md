@@ -18,7 +18,7 @@ Instead of posting a wall of text, we can use these blocks to structure our code
 
 ### Example:
 
-> In this case, the language is JSON, replace `json` with the actual language you are using
+<sub>In this case, the language is JSON, replace `json` with the actual language you are using</sub>
 
 `````
 ```json
