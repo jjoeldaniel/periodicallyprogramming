@@ -1,7 +1,8 @@
 from flask import Flask, render_template, render_template_string, jsonify, redirect, url_for
-from markdown.extensions.codehilite import CodeHiliteExtension
-import os
 import markdown
+import markdown.extensions.fenced_code
+from pygments.formatters import HtmlFormatter
+import os
 
 app = Flask(__name__, template_folder='../templates',
             static_folder='../static')
@@ -39,13 +40,16 @@ def blog_post(title=None):
 
     html_content = markdown.markdown(
         markdown_content,
-        extensions=[
-            'markdown.extensions.extra',
-            CodeHiliteExtension(linenums=False)
-        ]
+        extensions=["fenced_code", "codehilite"]
     )
+
+    formatter = HtmlFormatter(style="emacs", full=True, cssclass="codehilite")
+    css_string = formatter.get_style_defs()
+    md_css_string = "<style>" + css_string + "</style>"
+    md_template = md_css_string + html_content
+
     title = str(title).replace(".md", "").replace("_", " ")
-    return render_template('blog.html', title=title, html=html_content)
+    return render_template('blog.html', title=title, html=md_template)
 
 
 @app.route('/about')
