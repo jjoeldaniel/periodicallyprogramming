@@ -1,5 +1,6 @@
-from flask import Flask, render_template, jsonify, redirect, url_for
+from flask import Flask, render_template, render_template_string, jsonify, redirect, url_for
 import os
+import markdown
 
 app = Flask(__name__, template_folder='../templates',
             static_folder='../static')
@@ -26,10 +27,14 @@ def blog_index():
 def blog_post(title=None):
     blog_posts = [str(post).replace(".md", "") for post in os.listdir('./blogs')]
 
-    if title is not None and blog_posts.__contains__(title):
-        return "found"
+    if title not in blog_posts:
+        return redirect(url_for("blog_index"))
 
-    return "thanks"
+    with open(f'./blogs/{title}.md') as f:
+        markdown_content = f.read()
+
+    html_content = markdown.markdown(markdown_content)
+    return render_template_string(html_content)
 
 
 @app.route('/about')
@@ -50,8 +55,6 @@ def resume():
 
 
 @app.route('/source')
-@app.route('/sourcecode')
-@app.route('/source_code')
 def source():
     return redirect('https://github.com/jjoeldaniel/periodicallyprogramming')
 
@@ -65,11 +68,6 @@ def linkedin():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
-
-
-@app.route('/api/ping')
-def api():
-    return jsonify({'status': 'success'}), 200
 
 
 @app.route('/<path:path>')
