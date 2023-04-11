@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify, redirect, url_for
+import os
 
 app = Flask(__name__, template_folder='../templates',
             static_folder='../static')
@@ -17,7 +18,18 @@ def home():
 
 @app.route('/blog')
 def blog_index():
-    return render_template('blog_index.html')
+    blog_posts = [str(post).replace(".md", "") for post in os.listdir('./blogs')]
+    return render_template('blog_index.html', blog_posts=blog_posts)
+
+
+@app.route('/blog/<string:title>')
+def blog_post(title=None):
+    blog_posts = [str(post).replace(".md", "") for post in os.listdir('./blogs')]
+
+    if title is not None and blog_posts.__contains__(title):
+        return "found"
+
+    return "thanks"
 
 
 @app.route('/about')
