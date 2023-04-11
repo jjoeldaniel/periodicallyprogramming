@@ -25,9 +25,9 @@ def blog_index():
 
 @app.route('/blog/<string:title>')
 def blog_post(title=None):
-    blog_posts = [str(post).replace(".md", "") for post in os.listdir('./blogs')]
+    blog_posts = [str(post) for post in os.listdir('./blogs')]
 
-    if title not in blog_posts:
+    if str(title)+".md" not in blog_posts:
         return redirect(url_for("blog_index"))
 
     with open(f'./blogs/{title}.md') as f:
