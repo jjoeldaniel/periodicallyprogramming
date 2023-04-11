@@ -43,7 +43,7 @@ def blog_post(title=None):
         extensions=["fenced_code", "codehilite"]
     )
 
-    formatter = HtmlFormatter(style="emacs", full=True, cssclass="codehilite")
+    formatter = HtmlFormatter(style='github-dark', full=True, cssclass="codehilite")
     css_string = formatter.get_style_defs()
     md_css_string = "<style>" + css_string + "</style>"
     md_template = md_css_string + html_content
