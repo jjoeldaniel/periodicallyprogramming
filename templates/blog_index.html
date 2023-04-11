@@ -12,7 +12,7 @@
 </hgroup>
 
 {% for post in blog_posts %}
-<a href="/blog/{{post}}">{{ post }}</a>
+<a href="/blog/{{ post.href }}">{{ post.name }}</a>
 {% endfor %}
 
 {% endblock %}
