@@ -15,6 +15,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/blog')
+def blog_index():
+    return render_template('blog_index.html')
+
+
 @app.route('/about')
 @app.route('/contact')
 def contact():
