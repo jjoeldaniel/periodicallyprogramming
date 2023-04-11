@@ -23,7 +23,8 @@ def home():
 def blog_index():
     posts = list()
     for post in os.listdir('./blogs'):
-        posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}', 'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
+        posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}',
+                     'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
 
     return render_template('blog_index.html', blog_posts=posts, )
 
@@ -43,7 +44,8 @@ def blog_post(title=None):
         extensions=["fenced_code", "codehilite"]
     )
 
-    formatter = HtmlFormatter(style='github-dark', full=True, cssclass="codehilite")
+    formatter = HtmlFormatter(
+        style='github-dark', full=True, cssclass="codehilite")
     css_string = formatter.get_style_defs()
     md_css_string = "<style>" + css_string + "</style>"
     md_template = md_css_string + html_content
