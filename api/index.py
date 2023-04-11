@@ -21,7 +21,7 @@ def home():
 def blog_index():
     posts = list()
     for post in os.listdir('./blogs'):
-        posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}', 'href': f'{str(post)}'})
+        posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}', 'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
 
     return render_template('blog_index.html', blog_posts=posts, )
 
@@ -30,14 +30,15 @@ def blog_index():
 def blog_post(title=None):
     blog_posts = [str(post) for post in os.listdir('./blogs')]
 
-    if title not in blog_posts:
+    if str(title)+".md" not in blog_posts:
         return redirect(url_for("blog_index"))
 
-    with open(f'./blogs/{title}') as f:
+    with open(f'./blogs/{title}.md') as f:
         markdown_content = f.read()
 
     html_content = markdown.markdown(markdown_content)
-    return render_template_string(html_content)
+    title = str(title).replace(".md", "").replace("_", " ")
+    return render_template('blog.html', title=title, html=html_content)
 
 
 @app.route('/about')
