@@ -1,4 +1,5 @@
 from flask import Flask, render_template, render_template_string, jsonify, redirect, url_for
+from markdown.extensions.codehilite import CodeHiliteExtension
 import os
 import markdown
 
@@ -36,7 +37,13 @@ def blog_post(title=None):
     with open(f'./blogs/{title}.md') as f:
         markdown_content = f.read()
 
-    html_content = markdown.markdown(markdown_content)
+    html_content = markdown.markdown(
+        markdown_content,
+        extensions=[
+            'markdown.extensions.extra',
+            CodeHiliteExtension(linenums=False)
+        ]
+    )
     title = str(title).replace(".md", "").replace("_", " ")
     return render_template('blog.html', title=title, html=html_content)
 
