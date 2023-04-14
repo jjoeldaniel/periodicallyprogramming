@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="periodicallyprogramming" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="periodicallyprogramming.com/index" />
+    <meta property="og:url" content="periodicallyprogramming.com/home" />
     <meta
       property="og:image"
-      content="{{ url_for('static', filename='pfp.jpg') }}"
+      content="{{ url_for('static', path='pfp.jpg') }}"
     />
     <meta property="og:description" content="Welcome to my digital resume!" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"></link>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}"></link>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Noto+Sans"
@@ -22,7 +22,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Ubuntu"
     />
-    <link rel="icon" href="{{ url_for('static', filename='avalon.ico') }}" />
+    <link rel="icon" href="{{ url_for('static', path='avalon.ico') }}" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"
