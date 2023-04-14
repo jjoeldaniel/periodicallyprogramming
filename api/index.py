@@ -21,12 +21,20 @@ def home():
 
 @app.route('/blog')
 def blog_index():
+
+    # Get all files and sort by most recently modified
     posts = list()
     for post in os.listdir('./blogs'):
-        posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}',
+        posts.append(post)
+    posts = sorted(posts, key=lambda f: os.path.getmtime(os.path.join('./blogs', f)), reverse=True)
+
+    # Build list of file metadata
+    blog_posts = list()
+    for post in posts:
+        blog_posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}',
                      'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
 
-    return render_template('blog_index.html', blog_posts=posts, )
+    return render_template('blog_index.html', blog_posts=blog_posts, )
 
 
 @app.route('/blog/<string:title>')
