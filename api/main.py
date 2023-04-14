@@ -54,15 +54,14 @@ async def blog_post(title: str, request: Request):
         markdown_content = f.read()
 
     md = markdown.Markdown(extensions=['meta', 'fenced_code', 'codehilite'])
-    md.convert(markdown_content)
+    output = md.convert(markdown_content)
     meta = md.Meta
     print(meta)
-    content_without_meta = md.convert('\n'.join(md.lines))
 
     formatter = HtmlFormatter(
         style='github-dark', full=True, cssclass="codehilite")
     css_string = formatter.get_style_defs()
-    html = f"<style> {css_string} </style> {content_without_meta}"
+    html = f"<style> {css_string} </style> {output}"
 
     return templates.TemplateResponse('blog.html', {'request': request, 'html': html, 'title': meta['title'][0]})
 
