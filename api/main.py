@@ -25,7 +25,7 @@ async def home(request: Request):
 
 
 @app.get('/blog', response_class=HTMLResponse)
-def blog_index(request: Request):
+async def blog_index(request: Request):
 
     # Get all files and sort by most recently modified
     posts = list()
@@ -44,7 +44,7 @@ def blog_index(request: Request):
 
 
 @app.get('/blog/{title}')
-def blog_post(title: str, request: Request):
+async def blog_post(title: str, request: Request):
     blog_posts = [str(post) for post in os.listdir('./blogs')]
 
     if str(title)+".md" not in blog_posts:
@@ -53,19 +53,18 @@ def blog_post(title: str, request: Request):
     with open(f'./blogs/{title}.md') as f:
         markdown_content = f.read()
 
-    html_content = markdown.markdown(
-        markdown_content,
-        extensions=["fenced_code", "codehilite"]
-    )
+    md = markdown.Markdown(extensions=['meta', 'fenced_code', 'codehilite'])
+    md.convert(markdown_content)
+    meta = md.Meta
+    print(meta)
+    content_without_meta = md.convert('\n'.join(md.lines))
 
     formatter = HtmlFormatter(
         style='github-dark', full=True, cssclass="codehilite")
     css_string = formatter.get_style_defs()
-    md_css_string = "<style>" + css_string + "</style>"
-    md_template = md_css_string + html_content
+    html = f"<style> {css_string} </style> {content_without_meta}"
 
-    title = str(title).replace(".md", "").replace("_", " ")
-    return templates.TemplateResponse('blog.html', {'request': request, 'html': md_template, 'title': title})
+    return templates.TemplateResponse('blog.html', {'request': request, 'html': html, 'title': meta['title'][0]})
 
 
 @app.get('/about', response_class=HTMLResponse)
