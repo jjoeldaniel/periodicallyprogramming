@@ -4,20 +4,19 @@ Hello, I'm Joel, and today we're going to dive into the fascinating world of Rus
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Setup](#setup)
-  - [Key Concepts](#key-concepts)
+- [Key Concepts](#key-concepts)
 - [Hello World](#hello-world)
 - [Summary](#summary)
 - [Resources](#resources)
 
-## Setup
+<h2 id='setup'>Setup</h2>
 
 Getting Rust up and running on your machine is easy and quick. To install Rust, simply head to the official [Rust website](https://www.rust-lang.org/tools/install) and follow the installation instructions for your operating system. Rust has excellent support for Windows, macOS, and Linux, making it accessible to a wide range of developers.
 
 Once Rust is installed, you'll have access to the Rust compiler, cargo, which is Rust's built-in package manager, and a powerful set of tools for building and managing Rust projects.
 
-### Key Concepts
+<h2 id='key-concepts'>Key Concepts</h2>
 
 Rust has a unique syntax that blends C-like and functional programming paradigms. Some key concepts to understand when starting with Rust are:
 
@@ -33,7 +32,7 @@ Rust has a unique syntax that blends C-like and functional programming paradigms
 
 - **Modules and Crates:** Rust's module system allows you to organize your code into logical units, and crates are Rust's package manager and build system.
 
-## Hello World
+<h2 id='hello-world'>Hello World</h2>
 
 To get started, let's write our first Rust program. In your terminal, create a new project using cargo:
 
@@ -116,13 +115,13 @@ Rust has a number of built-in data types, including integers, floats, booleans, 
 
 Rust also provides a number of useful data structures, including tuples, arrays, and vectors. You can find a complete list of Rust's data structures [here](https://doc.rust-lang.org/std/collections/index.html).
 
-## Summary
+<h2 id='sumary'>Summary</h2>
 
 This was the first of a series of blog posts that will cover the basics of Rust. In this post, we covered how to install Rust, key concepts, and our first program. In the next post, we'll cover control flow, including if/else, loops, and pattern matching.
 
 See you next time!
 
-## Resources
+<h2 id='resources'>Resources</h2>
 
 [Comprehensive Rust](https://google.github.io/comprehensive-rust/) - Google-developed 4-day Rust crash course
 
