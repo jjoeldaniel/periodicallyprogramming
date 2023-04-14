@@ -1,6 +1,11 @@
+---
+title: Sharing Code With Markdown
+date: 2022-12-27
+---
+
 ## Introduction
 
-The purpose of this blog post is to introduce developers to the use of Markdown for sharing code with others and explores alternative tools like Pastebin and Privatebin. 
+The purpose of this blog post is to introduce developers to the use of Markdown for sharing code with others and explores alternative tools like Pastebin and Privatebin.
 
 This is specifically oriented towards use on Discord, however any site that supports [Markdown's extended syntax elements](https://www.markdownguide.org/extended-syntax/) will also work.
 
@@ -20,7 +25,7 @@ Instead of posting a wall of text, we can use these blocks to structure our code
 
 <small>In this case, the language is JSON, replace `json` with the actual language you are using</small>
 
-`````
+````
 ```json
 {
   "firstName": "John",
@@ -28,7 +33,7 @@ Instead of posting a wall of text, we can use these blocks to structure our code
   "age": 25
 }
 ```
-`````
+````
 
 ...would produce:
 
@@ -50,6 +55,6 @@ This blog post provides useful tips for developers looking to share their code w
 
 ## Resources
 
-* [Markdown Guide](https://www.markdownguide.org/extended-syntax/)
-* [Pastebin](https://pastebin.com/)
-* [Privatebin](https://privatebin.net/)
+- [Markdown Guide](https://www.markdownguide.org/extended-syntax/)
+- [Pastebin](https://pastebin.com/)
+- [Privatebin](https://privatebin.net/)

@@ -1,3 +1,8 @@
+---
+title: Intro to Rust
+date: 2023-04-13
+---
+
 # Intro to Rust
 
 Hello, I'm Joel, and today we're going to dive into the fascinating world of Rust programming! If you're new to Rust, you're in for a treat. Rust is a modern, systems programming language that is designed to be safe, concurrent, and fast. In this blog post, we'll cover the basics of Rust, including installation, key concepts, our first program, and some resources to help you get started.
