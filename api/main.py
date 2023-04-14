@@ -13,6 +13,19 @@ app.mount('/static', StaticFiles(directory='static'), name='static')
 templates = Jinja2Templates(directory="templates")
 
 
+# Get all files and sort by most recently modified
+posts = list()
+for post in os.listdir('./blogs'):
+    posts.append(post)
+posts = sorted(posts, key=lambda f: os.path.getmtime(os.path.join('./blogs', f)), reverse=True)
+
+# Build list of file metadata
+blog_posts = list()
+for post in posts:
+    blog_posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}',
+                 'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
+
+
 @app.get('/index', response_class=HTMLResponse)
 @app.get('/home', response_class=HTMLResponse)
 @app.get('/', response_class=HTMLResponse)
@@ -26,20 +39,6 @@ async def home(request: Request):
 
 @app.get('/blog', response_class=HTMLResponse)
 async def blog_index(request: Request):
-
-    # Get all files and sort by most recently modified
-    posts = list()
-    for post in os.listdir('./blogs'):
-        posts.append(post)
-    posts = sorted(posts, key=lambda f: os.path.getmtime(os.path.join('./blogs', f)), reverse=True)
-
-    # Build list of file metadata
-    blog_posts = list()
-    for post in posts:
-        blog_posts.append({'name': f'{str(post).replace(".md", "").replace("_", " ")}',
-                     'href': f'{str(post)}', 'file_name': f'{str(post).replace(".md", "")}'})
-
-    print(blog_posts)
     return templates.TemplateResponse('blog_index.html', {'request': request, 'blog_posts': blog_posts})
 
 
