@@ -11,6 +11,14 @@
   <h2>An index page for my blog posts!</h2>
 </hgroup>
 
-{% for post in blog_posts %}
-<a href="/blog/{{ post.file_name }}">{{ post.name }}</a><br />
-{% endfor %} {% endblock %}
+{% for date, items in blog_posts.items() %}
+  <h3>{{ date }}</h2>
+  <ul>
+      {% for item in items %}
+          <li>
+              <a href="/blog/{{ item.file_name }}">{{ item.name }}</a>
+          </li>
+      {% endfor %}
+  </ul>
+{% endfor %}
+{% endblock %}

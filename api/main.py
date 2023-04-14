@@ -14,10 +14,12 @@ templates = Jinja2Templates(directory="templates")
 
 # Get all files and sort by most recently modified
 blog_posts = dict()
+blog_dates = dict()
 blog_metadata = list()
+blog_metadata_by_date = dict()
 blog_html = dict()
 
-def initialize_blog(blog_posts: dict, blog_metadata: list, blog_html: dict):
+def initialize_blog(blog_posts: dict, blog_metadata: list, blog_metadata_by_date: dict, blog_html: dict):
     for post in os.listdir('./blogs'):
 
         with open(f'./blogs/{post}') as f:
@@ -47,8 +49,20 @@ def initialize_blog(blog_posts: dict, blog_metadata: list, blog_html: dict):
     # Sort by most recent
     blog_metadata = sorted(blog_metadata, key=lambda x: x['date'], reverse=True)
 
+    # Iterate through the blog metadata list
+    for item in blog_metadata:
+        # Extract the date value from the item
+        date = item['date']
 
-initialize_blog(blog_posts, blog_metadata, blog_html)
+        # If the date is not already a key in the dictionary, add it with an empty list as the value
+        if date not in blog_metadata_by_date:
+            blog_metadata_by_date[date] = []
+
+        # Append the item to the list of items for the respective date key
+        blog_metadata_by_date[date].append(item)
+
+
+initialize_blog(blog_posts, blog_metadata, blog_metadata_by_date, blog_html)
 
 
 @app.get('/index', response_class=HTMLResponse)
@@ -64,7 +78,7 @@ async def home(request: Request):
 
 @app.get('/blog', response_class=HTMLResponse)
 async def blog_index(request: Request):
-    return templates.TemplateResponse('blog_index.html', {'request': request, 'blog_posts': blog_metadata})
+    return templates.TemplateResponse('blog_index.html', {'request': request, 'blog_posts': blog_metadata_by_date})
 
 
 @app.get('/blog/{title}')
