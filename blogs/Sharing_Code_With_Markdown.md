@@ -9,6 +9,10 @@ The purpose of this blog post is to introduce developers to the use of Markdown 
 
 This is specifically oriented towards use on Discord, however any site that supports [Markdown's extended syntax elements](https://www.markdownguide.org/extended-syntax/) will also work.
 
+## Table of Contents
+
+[TOC]
+
 ## Structuring
 
 Before anyone can dive into reviewing your code, it has to actually be readable and structured clearly.
@@ -21,7 +25,7 @@ Typically, the best way to directly post your code is with [fenced code blocks](
 
 Instead of posting a wall of text, we can use these blocks to structure our code in a nice, easy-to-understand way (we even have access to syntax highlighting).
 
-### Example:
+## Example
 
 <small>In this case, the language is JSON, replace `json` with the actual language you are using</small>
 
