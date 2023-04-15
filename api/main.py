@@ -25,7 +25,7 @@ def initialize_blog(blog_posts: dict, blog_metadata: list, blog_metadata_by_date
         with open(f'./blogs/{post}') as f:
             markdown_content = f.read()
 
-        md = markdown.Markdown(extensions=['meta', 'fenced_code', 'codehilite'])
+        md = markdown.Markdown(extensions=['meta', 'fenced_code', 'codehilite', 'toc'])
         output = md.convert(markdown_content)
         meta = md.Meta
 
