@@ -3,25 +3,21 @@ title: Intro to Rust
 date: 2023-04-13
 ---
 
-# Introduction
+## Introduction
 
 Hello, I'm Joel, and today we're going to dive into the fascinating world of Rust programming! If you're new to Rust, you're in for a treat. Rust is a modern, systems programming language that is designed to be safe, concurrent, and fast. In this blog post, we'll cover the basics of Rust, including installation, key concepts, our first program, and some resources to help you get started.
 
 ## Table of Contents
 
-- [Setup](#setup)
-- [Key Concepts](#key-concepts)
-- [Hello World](#hello-world)
-- [Summary](#summary)
-- [Resources](#resources)
+[TOC]
 
-<h2 id='setup'>Setup</h2>
+## Setup
 
 Getting Rust up and running on your machine is easy and quick. To install Rust, simply head to the official [Rust website](https://www.rust-lang.org/tools/install) and follow the installation instructions for your operating system. Rust has excellent support for Windows, macOS, and Linux, making it accessible to a wide range of developers.
 
 Once Rust is installed, you'll have access to the Rust compiler, cargo, which is Rust's built-in package manager, and a powerful set of tools for building and managing Rust projects.
 
-<h2 id='key-concepts'>Key Concepts</h2>
+## Key Concepts
 
 Rust has a unique syntax that blends C-like and functional programming paradigms. Some key concepts to understand when starting with Rust are:
 
@@ -37,7 +33,7 @@ Rust has a unique syntax that blends C-like and functional programming paradigms
 
 - **Modules and Crates:** Rust's module system allows you to organize your code into logical units, and crates are Rust's package manager and build system.
 
-<h2 id='hello-world'>Hello World</h2>
+## Hello World
 
 To get started, let's write our first Rust program. In your terminal, create a new project using cargo:
 
@@ -120,13 +116,13 @@ Rust has a number of built-in data types, including integers, floats, booleans, 
 
 Rust also provides a number of useful data structures, including tuples, arrays, and vectors. You can find a complete list of Rust's data structures [here](https://doc.rust-lang.org/std/collections/index.html).
 
-<h2 id='sumary'>Summary</h2>
+## Summary
 
 This was the first of a series of blog posts that will cover the basics of Rust. In this post, we covered how to install Rust, key concepts, and our first program. In the next post, we'll cover control flow, including if/else, loops, and pattern matching.
 
 See you next time!
 
-<h2 id='resources'>Resources</h2>
+## Resources
 
 [Comprehensive Rust](https://google.github.io/comprehensive-rust/) - Google-developed 4-day Rust crash course
 
