@@ -1,4 +1,22 @@
 {% extends "template.html" %} {% block content %}
+<nav>
+  <ul>
+    <li><a href="/home"><strong>periodicallyprogramming</strong></a></li>
+  </ul>
+  <ul>
+    <li>
+      <details role="list">
+        <summary aria-haspopup="listbox">Contact</summary>
+        <ul role="listbox">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav>
+
 <hgroup style="font-family: 'Ubuntu', sans-serif">
   <h1>Contact Me</h1>
   <h2>Some of my contact information</h2>

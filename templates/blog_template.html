@@ -49,15 +49,21 @@
   <body>
     <main class="container">
       <nav>
-        <div>
-          <p>periodicallyprogramming</p>
-        </div>
-        <p>
-          <a href="/home">Home</a>
-          <a href="/projects">&nbsp;Projects&nbsp;</a>
-          <a href="/blog">Blog&nbsp;</a>
-          <a href="/contact">Contact</a>
-        </p>
+        <ul>
+          <li><a href="/home"><strong>periodicallyprogramming</strong></a></li>
+        </ul>
+        <ul>
+          <li>
+            <details role="list">
+              <summary aria-haspopup="listbox">Blog</summary>
+              <ul role="listbox">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
       </nav>
 
       {% block content %} {% endblock %}

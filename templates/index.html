@@ -1,4 +1,22 @@
 {% extends "template.html" %} {% block content %}
+<nav>
+  <ul>
+    <li><a href="/home"><strong>periodicallyprogramming</strong></a></li>
+  </ul>
+  <ul>
+    <li>
+      <details role="list">
+        <summary aria-haspopup="listbox">Home</summary>
+        <ul role="listbox">
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav>
+
 <hgroup style="font-family: 'Ubuntu', sans-serif">
   <h1>Joel Daniel Rico</h1>
   <h2>Aspiring Software Engineer</h2>
