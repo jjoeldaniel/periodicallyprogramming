@@ -3,7 +3,11 @@
 	export let data;
 
 	// @ts-ignore
-	const posts = data.posts;
+	const posts = data.posts.posts;
+	
+	// convert posts to array
+	// @ts-ignore
+	let arr = Object.values(posts);
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
@@ -15,10 +19,11 @@
 		<div class="space-y-3">
 			<h2>Recent Posts</h2>
 			<ul>
-				{#each posts as post}
+				<!-- add each json -->
+				{#each arr as {slug, title}}
 					<li>
-						<a href="/blog/{post.slug}">
-							{post.title}
+						<a href="/blog/{slug}">
+							{title}
 						</a>
 					</li>
 				{/each}
