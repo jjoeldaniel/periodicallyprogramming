@@ -34,7 +34,7 @@
 					</span>
 				</button></svelte:fragment
 			>
-			<h4 class="font-bold"><a href="/">periodicallyprogramming</a></h4>
+			<h4 class="font-bold gradient-heading"><a href="/">periodicallyprogramming</a></h4>
 			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
