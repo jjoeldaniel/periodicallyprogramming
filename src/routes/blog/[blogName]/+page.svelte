@@ -1,7 +1,6 @@
 <script>
 	import BlogHeader from '$lib/BlogHeader.svelte';
 	import { marked } from 'marked';
-	import {markedHighlight} from "marked-highlight";
 
 	/** @type {import('./$types').PageData} */
 	export let data;
