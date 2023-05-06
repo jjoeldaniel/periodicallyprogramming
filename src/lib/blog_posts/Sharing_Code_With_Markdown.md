@@ -9,10 +9,6 @@ The purpose of this blog post is to introduce developers to the use of Markdown 
 
 This is specifically oriented towards use on Discord, however any site that supports [Markdown's extended syntax elements](https://www.markdownguide.org/extended-syntax/) will also work.
 
-## Table of Contents
-
-[TOC]
-
 ## Structuring
 
 Before anyone can dive into reviewing your code, it has to actually be readable and structured clearly.
@@ -43,9 +39,9 @@ Instead of posting a wall of text, we can use these blocks to structure our code
 
 ```json
 {
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
+	"firstName": "John",
+	"lastName": "Smith",
+	"age": 25
 }
 ```
 
