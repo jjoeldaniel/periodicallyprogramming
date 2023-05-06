@@ -15,7 +15,7 @@
 
 	posts.forEach((post: any) => {
 		let title: string = post.title.toLowerCase();
-		title = title.replaceAll(' ', '_');
+		title = title.replaceAll(' ', '-');
 
 		names.push(title);
 		flavorOptions.push({
@@ -29,7 +29,7 @@
 	if (typeof window !== 'undefined') {
 		const urlParams = new URLSearchParams(window.location.search);
 		search = urlParams.get('query') || '';
-		search = search.replaceAll(' ', '_').toLocaleLowerCase();
+		search = search.replaceAll(' ', '-').toLocaleLowerCase();
 	}
 
 	// goto post if query param is present and valid

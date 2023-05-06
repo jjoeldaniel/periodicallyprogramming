@@ -19,8 +19,8 @@ export function getPosts() {
   for (const [path, content] of arr) {
 
     const file_name = path.split('/')[path.split('/').length - 1].replace('.md', '');
-    const slug = file_name.toLowerCase();
-    const title = file_name.replace(/_/g, ' ');
+    const slug = file_name.replaceAll('_', '-').toLowerCase();
+    const title = file_name.replaceAll(/_/g, ' ');
 
     data.push({
       slug,
