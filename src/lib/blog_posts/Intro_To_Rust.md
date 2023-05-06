@@ -7,10 +7,6 @@ date: 2023-04-13
 
 Hello, I'm Joel, and today we're going to dive into the fascinating world of Rust programming! If you're new to Rust, you're in for a treat. Rust is a modern, systems programming language that is designed to be safe, concurrent, and fast. In this blog post, we'll cover the basics of Rust, including installation, key concepts, our first program, and some resources to help you get started.
 
-## Table of Contents
-
-[TOC]
-
 ## Setup
 
 Getting Rust up and running on your machine is easy and quick. To install Rust, simply head to the official [Rust website](https://www.rust-lang.org/tools/install) and follow the installation instructions for your operating system. Rust has excellent support for Windows, macOS, and Linux, making it accessible to a wide range of developers.
