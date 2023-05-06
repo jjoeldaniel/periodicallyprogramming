@@ -2,8 +2,8 @@
 
 <div class="container h-full mx-auto max-w-xl flex justify-center items-center">
 	<div class="space-y-5">
-		<h1>Joel Daniel Rico</h1>
-		<h4>Aspiring Software Engineer</h4>
+		<h1><strong>Joel Daniel Rico</strong></h1>
+		<h4><i>Aspiring Software Engineer</i></h4>
 
 		<p>
 			Welcome to my website! This serves as my digital portfolio and contains my blog as well as all
