@@ -1,10 +1,12 @@
 <script>
 	import BlogHeader from '$lib/BlogHeader.svelte';
-	import { marked } from 'marked';
+	import MarkdownIt from 'markdown-it';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	const html = marked.parse(data.content);
+
+    let md = new MarkdownIt();
+	const html = md.render(data.content);
 </script>
 
 <div class="container h-full mx-auto flex flex-col justify-center">
