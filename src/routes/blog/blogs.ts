@@ -1,18 +1,10 @@
 import { marked } from 'marked';
 
-// export function searchPosts(query: string) {
-//   const posts = getPosts().posts;
-
-//   return {
-//     posts: posts.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
-//   };
-// }
-
 export function searchPosts(query: string) {
   const posts = getPosts().posts;
 
   return {
-    posts: posts.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
+    posts: posts.filter((post) => post.slug.includes(query.toLowerCase()))
   };
 }
 
@@ -26,7 +18,7 @@ export function getPosts() {
   const data = [];
   const arr = Object.entries(posts);
 
-  for (const [path, post] of arr) {
+  for (const [path, content] of arr) {
 
     const file_name = path.split('/')[path.split('/').length - 1].replace('.md', '');
     const slug = file_name.toLowerCase();
@@ -34,7 +26,8 @@ export function getPosts() {
 
     data.push({
       slug,
-      title
+      title,
+      content
     });
   }
 
