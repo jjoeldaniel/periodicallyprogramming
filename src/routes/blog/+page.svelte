@@ -1,9 +1,23 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { Autocomplete } from '@skeletonlabs/skeleton';
 	import type { AutocompleteOption } from '@skeletonlabs/skeleton';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+
+	// check for query param
+	let search = '';
+	if (typeof window !== 'undefined') {
+		const urlParams = new URLSearchParams(window.location.search);
+		search = urlParams.get('query') || '';
+		search = search.replaceAll(' ', '_').toLowerCase();
+	}
+
+	// goto post if query param is present
+	if (search) {
+		goto(`/blog/${search}`);
+	}
 
 	const posts = Object.values(data.posts.posts);
 
@@ -27,9 +41,10 @@
 	<div class="space-y-8">
 		<h1>Welcome to my blog!</h1>
 
-		<form method="POST">
+		<form data-sveltekit-reload action="/blog/">
 			<input
 				class="input"
+				required
 				autocomplete="off"
 				bind:value={query}
 				type="search"
