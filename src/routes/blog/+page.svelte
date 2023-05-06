@@ -1,27 +1,20 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { Autocomplete } from '@skeletonlabs/skeleton';
 	import type { AutocompleteOption } from '@skeletonlabs/skeleton';
-	import { redirect } from '@sveltejs/kit';
-	import { prevent_default } from 'svelte/internal';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	// @ts-ignore
-	const posts = data.posts.posts;
-	
-	// convert posts to array
-	const arr = Object.values(posts);
+	const posts = Object.values(data.posts.posts);
 
 	// array of post names
-	const postNames = arr.map((post: any) => post.title);
+	const postNames = posts.map((post: any) => post.title);
 
 	// build autocomplete options
 	let query = '';
 	let flavorOptions: AutocompleteOption[] = [];
 
-	arr.forEach((post: any) => {
+	posts.forEach((post: any) => {
 		flavorOptions.push({
 			label: post.title,
 			value: post.slug
@@ -47,7 +40,7 @@
 			<h2>Recent Posts</h2>
 			<ul>
 				<!-- add each json -->
-				{#each arr as {slug, title}}
+				{#each posts as {slug, title}}
 					<li>
 						<a href="/blog/{slug}">
 							{title}
