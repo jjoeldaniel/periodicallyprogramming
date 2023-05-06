@@ -7,9 +7,6 @@
 
 	const posts = Object.values(data.posts.posts);
 
-	// array of post names
-	const postNames = posts.map((post: any) => post.title);
-
 	// build autocomplete options
 	let query = '';
 	let flavorOptions: AutocompleteOption[] = [];

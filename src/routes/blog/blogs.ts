@@ -1,5 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+import { marked } from 'marked';
+
+// export function searchPosts(query: string) {
+//   const posts = getPosts().posts;
+
+//   return {
+//     posts: posts.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
+//   };
+// }
 
 export function searchPosts(query: string) {
   const posts = getPosts().posts;
@@ -10,21 +17,39 @@ export function searchPosts(query: string) {
 }
 
 export function getPosts() {
-  const posts = fs.readdirSync(path.join(process.cwd(), 'static/blog_posts')).map((file) => {
-    const post = fs.readFileSync(path.join(process.cwd(), 'static/blog_posts', file), 'utf-8').split('\n').slice(1).join('\n');
-    const [meta, content] = post.split('---');
-    const [title, date] = meta.split('\n');
-    
-    const title_ = title.replace('title: ', '');
-    return {
-      slug: title_.replace(/ /g, '-').toLowerCase(),
-      title: title_,
-      date: date.replace('date: ', ''),
-      content
-    };
-  });
+  const posts = import.meta.glob(
+    '$lib/blog_posts/*.md', { 
+      as: 'raw', eager: true 
+    }
+  );
+
+  const data = [];
+  const arr = Object.entries(posts);
+
+  for (const [path, post] of arr) {
+
+    const file_name = path.split('/')[path.split('/').length - 1].replace('.md', '');
+    const slug = file_name.toLowerCase();
+    const title = file_name.replace(/_/g, ' ');
+
+    data.push({
+      slug,
+      title
+    });
+  }
 
   return {
-    posts
+    posts: data
   };
 }
+
+// const [meta, content] = post.split('---');
+//     const [title, date] = meta.split('\n');
+    
+//     const title_ = title.replace('title: ', '');
+//     return {
+//       slug: title_.replace(/ /g, '-').toLowerCase(),
+//       title: title_,
+//       date: date.replace('date: ', ''),
+//       content
+//     };
