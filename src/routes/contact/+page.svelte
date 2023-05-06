@@ -20,7 +20,7 @@
 
 		<h4>Some of my contact information</h4>
 
-		<ul>
+		<ul class="text-lg">
 			<li>GitHub: <a href="https://github.com/jjoeldaniel">jjoeldaniel</a></li>
 			<li>
 				Discord:
