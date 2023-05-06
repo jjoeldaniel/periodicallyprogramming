@@ -27,7 +27,9 @@
 	<div class="space-y-8">
 		<h1>Welcome to my blog!</h1>
 		
-		<input class="input" bind:value={query} type="search" name="blogSearch" placeholder="Search..." />
+		<form method="POST">
+			<input class="input" bind:value={query} type="search" name="query" placeholder="Search..." />
+		</form>
 
 		<div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
 			<Autocomplete bind:input={query} options={flavorOptions} on:selection={onFlavorSelection} />
