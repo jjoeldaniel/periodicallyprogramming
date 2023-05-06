@@ -30,7 +30,7 @@
 </script>
 
 <div class="container h-full mx-auto flex flex-col justify-center">
-	<div class="space-y-5 pt-16">
+	<div class="space-y-5 mx-5 pt-16">
 		<BlogHeader {title} {date} />
 		{@html html}
 	</div>

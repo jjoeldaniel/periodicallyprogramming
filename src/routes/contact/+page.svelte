@@ -7,6 +7,8 @@
 	<div class="space-y-5">
 		<BlogHeader title={'Contact Me'} date="" />
 
+		<h4>Some of my contact information</h4>
+
 		<ul>
 			<li>GitHub: <a href="https://github.com/jjoeldaniel">jjoeldaniel</a></li>
 			<li>
