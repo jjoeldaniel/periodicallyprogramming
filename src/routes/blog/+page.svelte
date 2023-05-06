@@ -2,6 +2,16 @@
 	import { goto } from '$app/navigation';
 	import { Autocomplete } from '@skeletonlabs/skeleton';
 	import type { AutocompleteOption } from '@skeletonlabs/skeleton';
+	import { Toast, toastStore } from '@skeletonlabs/skeleton';
+	import type { ToastSettings } from '@skeletonlabs/skeleton';
+
+	function noMatch() {
+		const t: ToastSettings = {
+			message: 'No blog post found!',
+			background: 'variant-filled-warning'
+		};
+		toastStore.trigger(t);
+	}
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -39,6 +49,7 @@
 			goto(`/blog/${search}`);
 		} else {
 			goto(`/blog/`);
+			noMatch();
 		}
 	}
 
@@ -46,6 +57,8 @@
 		query = event.detail.label;
 	}
 </script>
+
+<Toast />
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-8">
