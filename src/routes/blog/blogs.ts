@@ -1,5 +1,3 @@
-import { marked } from 'marked';
-
 export function searchPosts(query: string) {
   const posts = getPosts().posts;
 
@@ -35,14 +33,3 @@ export function getPosts() {
     posts: data
   };
 }
-
-// const [meta, content] = post.split('---');
-//     const [title, date] = meta.split('\n');
-    
-//     const title_ = title.replace('title: ', '');
-//     return {
-//       slug: title_.replace(/ /g, '-').toLowerCase(),
-//       title: title_,
-//       date: date.replace('date: ', ''),
-//       content
-//     };
