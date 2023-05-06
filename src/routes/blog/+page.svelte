@@ -6,31 +6,41 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	// check for query param
-	let search = '';
-	if (typeof window !== 'undefined') {
-		const urlParams = new URLSearchParams(window.location.search);
-		search = urlParams.get('query') || '';
-		search = search.replaceAll(' ', '_').toLowerCase();
-	}
-
-	// goto post if query param is present
-	if (search) {
-		goto(`/blog/${search}`);
-	}
-
 	const posts = Object.values(data.posts.posts);
 
 	// build autocomplete options
 	let query = '';
 	let flavorOptions: AutocompleteOption[] = [];
+	let names: string[] = [];
 
 	posts.forEach((post: any) => {
+		let title: string = post.title.toLowerCase();
+		title = title.replaceAll(' ', '_');
+
+		names.push(title);
 		flavorOptions.push({
 			label: post.title,
 			value: post.slug
 		});
 	});
+
+	// check for query param
+	let search = '';
+	if (typeof window !== 'undefined') {
+		const urlParams = new URLSearchParams(window.location.search);
+		search = urlParams.get('query') || '';
+		search = search.replaceAll(' ', '_').toLocaleLowerCase();
+	}
+
+	// goto post if query param is present and valid
+	if (search) {
+		// check if post exists
+		if (names.includes(search)) {
+			goto(`/blog/${search}`);
+		} else {
+			goto(`/blog/`);
+		}
+	}
 
 	function onFlavorSelection(event: any): void {
 		query = event.detail.label;
