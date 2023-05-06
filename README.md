@@ -1,38 +1,11 @@
-# create-svelte
+# periodicallyprogramming.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> Tech blog and portfolio
 
-## Creating a project
+Welcome to my website! This serves as my digital portfolio and contains my blog as well as all my projects. You can expect to find in-depth tutorials, insightful articles, and updates on my latest projects right here on periodicallyprogramming.
 
-If you're seeing this, you've probably already done this step. Congrats!
+I hope you find my blog and projects interesting and informative. Don't hesitate to reach out if you have any questions or suggestions. Happy coding!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Technology
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This website is built using SvelteKit, TailwindCSS, and Skeleton.
