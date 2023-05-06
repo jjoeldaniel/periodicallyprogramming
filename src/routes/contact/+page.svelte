@@ -1,21 +1,21 @@
 <script lang="ts">
 	import BlogHeader from '$lib/BlogHeader.svelte';
+	import { clipboard } from '@skeletonlabs/skeleton';
 </script>
 
 <div class="container h-full mx-auto flex flex-col justify-center text-center">
 	<div class="space-y-5">
-		<BlogHeader title={'Contact Me'} />
+		<BlogHeader title={'Contact Me'} date="" />
 
-		<p>Start by exploring:</p>
 		<ul>
+			<li>GitHub: <a href="https://github.com/jjoeldaniel">jjoeldaniel</a></li>
 			<li>
-				<code>/src/routes/+layout.svelte</code> - barebones layout, the CSS import order is critical!
+				Discord:
+				<button class="text-blue-500 hover:text-blue-700" use:clipboard={'joel#0005'}>
+					joel#0005
+				</button>
 			</li>
-			<li>
-				<code>/src/app.postcss</code> - minimal css to make the page full screen, may not be relevant
-				for your project
-			</li>
-			<li><code>/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
+			<li>Twitter: <a href="https://twitter.com/jjoeldaniel">jjoeldaniel</a></li>
 		</ul>
 	</div>
 </div>
