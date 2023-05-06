@@ -10,8 +10,8 @@ export function searchPosts(query: string) {
 }
 
 export function getPosts() {
-  const posts = fs.readdirSync('./blog_posts').map((file) => {
-    const post = fs.readFileSync(path.join('./blog_posts', file), 'utf-8').split('\n').slice(1).join('\n');
+  const posts = fs.readdirSync('blog_posts').map((file) => {
+    const post = fs.readFileSync(path.join('blog_posts', file), 'utf-8').split('\n').slice(1).join('\n');
     const [meta, content] = post.split('---');
     const [title, date] = meta.split('\n');
     
