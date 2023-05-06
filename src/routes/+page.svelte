@@ -1,13 +1,18 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="container h-full mx-auto flex justify-center items-center">
+<div class="container h-full mx-auto max-w-xl flex justify-center items-center">
 	<div class="space-y-5">
-		<h1>Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code>/src/routes/+layout.svelte</code> - barebones layout, the CSS import order is critical!</li>
-			<li><code>/src/app.postcss</code> - minimal css to make the page full screen, may not be relevant for your project</li>
-			<li><code>/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
-		</ul>
+		<h1>Joel Daniel Rico</h1>
+		<h4>Aspiring Software Engineer</h4>
+
+		<p>
+			Welcome to my website! This serves as my digital portfolio and contains my blog as well as all
+			my projects. You can expect to find in-depth tutorials, insightful articles, and updates on my
+			latest projects right here on periodicallyprogramming.
+		</p>
+		<p>
+			I hope you find my blog and projects interesting and informative. Don't hesitate to reach out
+			if you have any questions or suggestions. Happy coding!
+		</p>
 	</div>
 </div>
