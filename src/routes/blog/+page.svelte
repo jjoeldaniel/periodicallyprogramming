@@ -20,33 +20,26 @@
 
 	function onFlavorSelection(event: any): void {
 		query = event.detail.label;
-	}	
+	}
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-8">
 		<h1>Welcome to my blog!</h1>
-		
+
 		<form method="POST">
-			<input class="input" bind:value={query} type="search" name="query" placeholder="Search..." />
+			<input
+				class="input"
+				autocomplete="off"
+				bind:value={query}
+				type="search"
+				name="query"
+				placeholder="Search..."
+			/>
 		</form>
 
 		<div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
 			<Autocomplete bind:input={query} options={flavorOptions} on:selection={onFlavorSelection} />
-		</div>
-
-		<div class="space-y-3">
-			<h2>Recent Posts</h2>
-			<ul>
-				<!-- add each json -->
-				{#each posts as {slug, title}}
-					<li>
-						<a href="/blog/{slug}">
-							{title}
-						</a>
-					</li>
-				{/each}
-			</ul>
 		</div>
 	</div>
 </div>
