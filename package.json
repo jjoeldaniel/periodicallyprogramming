@@ -39,7 +39,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"marked": "^5.0.0",
-		"marked-highlight": "^1.0.1"
+		"markdown-it": "^13.0.1"
 	}
 }
