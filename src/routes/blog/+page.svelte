@@ -21,6 +21,7 @@
 	// build autocomplete options
 	let query = '';
 	let flavorOptions: AutocompleteOption[] = [];
+	let currentIndex = 0;
 	let names: string[] = [];
 
 	posts.forEach((post: any) => {
@@ -56,6 +57,16 @@
 	function onFlavorSelection(event: any): void {
 		query = event.detail.label;
 	}
+
+	function navigateList(event: any): void {
+		if (event.key === 'ArrowDown') {
+			const maxIndex = flavorOptions.length - 1;
+			currentIndex + 1 > maxIndex ? (currentIndex = 0) : currentIndex++;
+		} else if (event.key === 'ArrowUp') {
+			currentIndex - 1 < 0 ? (currentIndex = 0) : currentIndex--;
+		}
+		query = flavorOptions[currentIndex].label;
+	}
 </script>
 
 <Toast />
@@ -67,6 +78,7 @@
 		<form data-sveltekit-reload action="/blog/">
 			<input
 				class="input"
+				on:keydown={navigateList}
 				required
 				autocomplete="off"
 				bind:value={query}
