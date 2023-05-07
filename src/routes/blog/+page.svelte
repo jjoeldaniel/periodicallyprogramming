@@ -59,13 +59,12 @@
 	}
 
 	function navigateList(event: any): void {
+		query = flavorOptions[currentIndex].label;
 		if (event.key === 'ArrowDown') {
-			const maxIndex = flavorOptions.length - 1;
-			currentIndex + 1 > maxIndex ? (currentIndex = 0) : currentIndex++;
+			currentIndex + 1 > flavorOptions.length - 1 ? (currentIndex = 0) : currentIndex++;
 		} else if (event.key === 'ArrowUp') {
 			currentIndex - 1 < 0 ? (currentIndex = 0) : currentIndex--;
 		}
-		query = flavorOptions[currentIndex].label;
 	}
 </script>
 
