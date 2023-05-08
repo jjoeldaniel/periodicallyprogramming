@@ -53,6 +53,7 @@
 
 	function onFlavorSelection(event: any): void {
 		query = event.detail.label;
+		goto(`/blog/${event.detail.value}`);
 	}
 </script>
 
