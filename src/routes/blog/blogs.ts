@@ -1,9 +1,19 @@
+import { error } from '@sveltejs/kit';
+
 export function searchPosts(query: string) {
   const posts = getPosts().posts;
 
-  return {
-    posts: posts.filter((post) => post.slug.includes(query.toLowerCase()))
-  };
+  // check if query is a valid title within the posts
+  const valid: boolean = posts.some((post) => post.title.toLowerCase().includes(query.toLowerCase()));
+
+  if (valid) {
+    return {
+      posts: posts.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
+    };
+  }
+  throw error(404, {
+    message: "Uh oh! We couldn't find that post."
+});
 }
 
 export function getPosts() {
