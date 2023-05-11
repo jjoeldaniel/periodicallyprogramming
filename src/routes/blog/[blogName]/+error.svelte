@@ -8,7 +8,7 @@
 </script>
 
 <div class="container h-full space-y-10 mx-auto max-w-xl flex flex-col justify-center items-center">
-	<div class="flex flex-row">
+	<div class="flex flex-col text-center gap-8 md:flex-row items-center">
 		<h1>{message}</h1>
 		<ProgressRadial />
 	</div>
