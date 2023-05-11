@@ -64,7 +64,7 @@
 		</div>
 		<div class="card card-hover overflow-hidden">
 			<header>
-				<a href="https://github.com/jjoeldaniel/jpass">
+				<a href="https://github.com/jjoeldaniel/keyphrases.rs">
 					<img src={data_science} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
 				</a>
 			</header>
@@ -119,7 +119,7 @@
 		</div>
 		<div class="card card-hover overflow-hidden">
 			<header>
-				<a href="https://github.com/jjoeldaniel/jpass">
+				<a href="https://github.com/jjoeldaniel/topics">
 					<img src={glass} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
 				</a>
 			</header>
