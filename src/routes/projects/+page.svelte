@@ -1,6 +1,9 @@
 <script>
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import avatar from '$lib/images/avatar.png';
+	import password from '$lib/images/password.png';
+	import data_science from '$lib/images/data_science.png';
+	import glass from '$lib/images/glass.jpg';
 </script>
 
 <div
@@ -16,11 +19,7 @@
 		<div class="card card-hover overflow-hidden">
 			<header>
 				<a href="https://github.com/jjoeldaniel/jpass">
-					<img
-						src="https://media.wired.com/photos/641e1a1b43ffd37beea02cdf/16:9/w_4892,h_2752,c_limit/Best%20Password%20Managers%20Gear%20GettyImages-1408198405.png"
-						class="bg-black/50 w-full aspect-[21/9]"
-						alt="Post"
-					/>
+					<img src={password} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
 				</a>
 			</header>
 			<div class="p-4 space-y-4">
@@ -66,11 +65,7 @@
 		<div class="card card-hover overflow-hidden">
 			<header>
 				<a href="https://github.com/jjoeldaniel/jpass">
-					<img
-						src="https://mps.rutgers.edu/images/slides/DATA_SCIENCE_AdobeStock-294794307.jpg"
-						class="bg-black/50 w-full aspect-[21/9]"
-						alt="Post"
-					/>
+					<img src={data_science} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
 				</a>
 			</header>
 			<div class="p-4 space-y-4">
@@ -125,11 +120,7 @@
 		<div class="card card-hover overflow-hidden">
 			<header>
 				<a href="https://github.com/jjoeldaniel/jpass">
-					<img
-						src="https://t2marketinginternational.com/wp-content/uploads/2018/12/graph-line-trend-analytics-magnifying-glass-ss-1920.jpg"
-						class="bg-black/50 w-full aspect-[21/9]"
-						alt="Post"
-					/>
+					<img src={glass} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
 				</a>
 			</header>
 			<div class="p-4 space-y-4">
