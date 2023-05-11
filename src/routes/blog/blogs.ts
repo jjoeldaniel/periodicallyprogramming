@@ -4,11 +4,11 @@ export function searchPosts(query: string) {
   const posts = getPosts().posts;
 
   // check if query is a valid title within the posts
-  const valid: boolean = posts.some((post) => post.title.toLowerCase().includes(query.toLowerCase()));
+  const valid: boolean = posts.some((post) => post.slug.includes(query.toLowerCase()))
 
   if (valid) {
     return {
-      posts: posts.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
+      posts: posts.filter((post) => post.slug.includes(query.toLowerCase()))
     };
   }
   throw error(404, {
