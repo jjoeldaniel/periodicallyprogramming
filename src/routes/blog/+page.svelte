@@ -62,7 +62,7 @@
 
 <div class="container h-full mx-auto flex md:max-w-md max-w-xs justify-center items-center">
 	<div class="space-y-8 relative">
-		<h1>Welcome to my blog!</h1>
+		<h1 class="font-semibold">Welcome to my blog!</h1>
 		<p>Here you'll find my technological hot takes and blog posts</p>
 
 		<form data-sveltekit-reload action="/blog/">
@@ -87,5 +87,23 @@
 				</div>
 			{/if}
 		</form>
+
+		<div id="posts" class="space-y-5">
+			<h2 class="font-semibold">All Posts</h2>
+			{#each posts as post}
+				<div>
+					<header>
+						<a href={`/blog/${post.slug}`}>
+							<h3 class="font-semibold">{post.title}</h3>
+						</a>
+					</header>
+					<section class="pb-2 pt-1">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt nam. Facilis,
+						eveniet dolore nemo ea officiis obcaecati rem maiores minus? At, totam repellendus
+						fugiat aperiam unde natus voluptate architecto.
+					</section>
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
