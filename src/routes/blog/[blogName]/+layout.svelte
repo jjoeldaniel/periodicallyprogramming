@@ -5,7 +5,7 @@
 
 <AppShell>
 	<svelte:fragment slot="sidebarRight">
-		<div class="2xl:flex hidden py-20 px-3 fixed top-0 right-0">
+		<div class="2xl:flex xl:flex hidden py-20 px-3 fixed top-0 right-0">
 			<TableOfContents target="#page" />
 		</div>
 	</svelte:fragment>
