@@ -40,4 +40,15 @@
 	</svelte:fragment>
 
 	<slot />
+
+	<svelte:fragment slot="pageFooter">
+		<hr class="h-px mt-6 mb-6 border-0" />
+		<ul class="ul pb-5 flex space-x-7 justify-center">
+			<li class="li"><a href="https://github.com/jjoeldaniel/">GitHub</a></li>
+			<li class="li"><a href="/contact">Contact</a></li>
+			<li class="li">
+				<a href="https://github.com/jjoeldaniel/periodicallyprogramming">Source Code</a>
+			</li>
+		</ul></svelte:fragment
+	>
 </AppShell>
