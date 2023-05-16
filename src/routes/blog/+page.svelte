@@ -18,6 +18,7 @@
 
 	// build autocomplete options
 	let query = '';
+	let empty = query == '' ? true : false;
 	let flavorOptions: AutocompleteOption[] = [];
 	let names: string[] = [];
 
@@ -59,9 +60,10 @@
 
 <Toast />
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-8">
+<div class="container h-full mx-auto flex md:max-w-md max-w-xs justify-center items-center">
+	<div class="space-y-8 relative">
 		<h1>Welcome to my blog!</h1>
+		<p>Here you'll find my technological hot takes and blog posts</p>
 
 		<form data-sveltekit-reload action="/blog/">
 			<input
@@ -69,14 +71,21 @@
 				required
 				autocomplete="off"
 				bind:value={query}
+				on:input={() => (empty = query == '' ? true : false)}
 				type="search"
 				name="query"
 				placeholder="Search..."
 			/>
 
-			<div class="card w-full max-w-sm max-h-48 p-4 mt-3 overflow-y-auto">
-				<Autocomplete bind:input={query} options={flavorOptions} on:selection={onFlavorSelection} />
-			</div>
+			{#if !empty}
+				<div class="card absolute w-full max-h-48 p-4 mt-3 overflow-y-auto">
+					<Autocomplete
+						bind:input={query}
+						options={flavorOptions}
+						on:selection={onFlavorSelection}
+					/>
+				</div>
+			{/if}
 		</form>
 	</div>
 </div>
