@@ -6,20 +6,15 @@
 	}
 </script>
 
-<nav class="list-nav">
-	<ul>
-		<li class="hidden"><a href="/">easter egg</a></li>
-		<li><a href="/" on:click={drawerClose}>Home</a></li>
-		<li><a href="/blog" on:click={drawerClose}>Blog</a></li>
-		<li><a href="/contact" on:click={drawerClose}>Contact</a></li>
-		<li>
-			<a href="/projects" on:click={drawerClose}>Projects</a>
-		</li>
-	</ul>
+<nav class="list-nav text-5xl h-full flex flex-col place-content-evenly">
+	<a class="grow" href="/" on:click={drawerClose}>Home</a>
+	<a class="grow" href="/blog" on:click={drawerClose}>Blog</a>
+	<a class="grow" href="/contact" on:click={drawerClose}>Contact</a>
+	<a class="grow" href="/projects" on:click={drawerClose}>Projects</a>
 </nav>
 
 <style>
-	li a {
+	a {
 		border-radius: 0;
 	}
 </style>

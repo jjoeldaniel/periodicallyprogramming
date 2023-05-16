@@ -10,7 +10,7 @@
 	function drawerOpen(): void {
 		drawerStore.open({
 			padding: 'p-3',
-			width: 'md:w-1/6 w-10/12',
+			width: 'md:w-1/3 xl:w-1/6 lg:w-3/12 xl:w-3/12 w-8/12',
 			rounded: 'rounded-lg'
 		});
 	}
