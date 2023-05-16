@@ -61,7 +61,7 @@
 <Toast />
 
 <div class="container h-full mx-auto flex md:max-w-md max-w-xs justify-center items-center">
-	<div class="space-y-8 relative">
+	<div class="space-y-8 relative pt-5 md:pt-0">
 		<h1 class="font-semibold">Welcome to my blog!</h1>
 		<p>Here you'll find my technological hot takes and blog posts</p>
 
