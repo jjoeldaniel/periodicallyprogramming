@@ -56,6 +56,27 @@
 		query = event.detail.label;
 		goto(`/blog/${event.detail.value}`);
 	}
+
+	function graphFirstParagraph(str: string) {
+		const index = str.indexOf('## Introduction');
+		if (index !== -1) {
+			const substr = str.substring(index + 15);
+			const strings = substr.split('##', 1);
+			strings[0].split(' ', 50).join(' ');
+			strings[0] = strings[0]
+				.replace(/ *\([^)]*\) */g, ' ')
+				.replace('[', '')
+				.replace(']', '');
+			return strings[0];
+		}
+
+		return [];
+	}
+
+	function calculateReadTime(str: string) {
+		const numberOfWords = str.split(/\s/g).length;
+		return Math.ceil(numberOfWords / 175);
+	}
 </script>
 
 <Toast />
@@ -97,11 +118,12 @@
 							<h3 class="font-semibold">{post.title}</h3>
 						</a>
 					</header>
-					<section class="pb-2 pt-1">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt nam. Facilis,
-						eveniet dolore nemo ea officiis obcaecati rem maiores minus? At, totam repellendus
-						fugiat aperiam unde natus voluptate architecto.
+					<section class="pb-2 pt-1 max-w-md line-clamp-4">
+						{graphFirstParagraph(post.content)}
 					</section>
+					<footer class="text-sm">
+						{calculateReadTime(post.content)} min read
+					</footer>
 				</div>
 			{/each}
 		</div>
