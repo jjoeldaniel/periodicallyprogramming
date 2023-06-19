@@ -9,6 +9,17 @@
 	import Navigation from '$lib/Navigation.svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+	let isIOS = false;
+
+	onMount(() => {
+		isIOS = navigator.userAgent.match(/(iPhone|iPad|iPod touch)/i) !== null;
+	});
+
+	if (isIOS) {
+		document.documentElement.style.setProperty('-webkit-hide-toolbar', 'true');
+	}
 
 	function drawerOpen(): void {
 		drawerStore.open({
