@@ -6,7 +6,7 @@
 	}
 </script>
 
-<div class=" h-fit flex justify-center items-center">
+<div class=" h-full flex justify-center items-center">
 	<div class="grid grid-cols-1 gap-3 text-2xl">
 		<AppRailTile href="/blog" on:click={drawerClose}
 			><div class="flex place-items-center flex-col">
