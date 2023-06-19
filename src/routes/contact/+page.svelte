@@ -27,7 +27,7 @@
 				<button
 					class="text-blue-500 hover:text-blue-700"
 					on:click={copyToClipboard}
-					use:clipboard={'joel#0005'}
+					use:clipboard={'jjoeldaniel'}
 				>
 					joel#0005
 				</button>
