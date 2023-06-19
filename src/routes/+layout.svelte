@@ -12,9 +12,7 @@
 
 	function drawerOpen(): void {
 		drawerStore.open({
-			padding: 'p-3',
-			width: 'md:w-1/3 xl:w-1/6',
-			rounded: 'rounded-lg'
+			position: 'top'
 		});
 	}
 
