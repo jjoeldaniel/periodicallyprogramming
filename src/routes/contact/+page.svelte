@@ -29,7 +29,7 @@
 					on:click={copyToClipboard}
 					use:clipboard={'jjoeldaniel'}
 				>
-					joel#0005
+					jjoeldaniel
 				</button>
 			</li>
 			<li>Twitter: <a href="https://twitter.com/jjoeldaniel">jjoeldaniel</a></li>
