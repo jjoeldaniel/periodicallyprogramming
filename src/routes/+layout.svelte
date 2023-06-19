@@ -55,7 +55,7 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar
-			padding="pt-0 pb-0"
+			padding="md:pt-0 md:pb-0 pt-5 pb-5"
 			gridColumns="grid-cols-3"
 			slotDefault="place-self-center"
 			slotTrail="place-content-end"
