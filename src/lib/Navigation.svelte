@@ -8,12 +8,6 @@
 
 <div class=" h-fit flex justify-center items-center">
 	<div class="grid grid-cols-1 gap-3 text-2xl">
-		<AppRailTile href="/" on:click={drawerClose}
-			><div class="flex place-items-center flex-col">
-				<span class="material-symbols-outlined"> home </span>
-				Home
-			</div></AppRailTile
-		>
 		<AppRailTile href="/blog" on:click={drawerClose}
 			><div class="flex place-items-center flex-col">
 				<span class="material-symbols-outlined"> book </span>
