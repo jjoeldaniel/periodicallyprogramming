@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
+import BlogHeader from "../../components/BlogHeader.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -18,7 +18,7 @@ const slug = "/blog/" + entry.slug;
 
 <Layout title={entry.data.title}>
     <main class="rounded-md bg-[#282c37] border-transparent ml-2">
-        <Header slug={slug} title={entry.data.title} />
+        <BlogHeader slug={slug} title={entry.data.title} />
 
         <div class="p-4">
             <div
