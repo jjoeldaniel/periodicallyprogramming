@@ -10,13 +10,13 @@ const { slug, title } = Astro.props;
 <div
     class="text-lg flex items-center pt-3 pb-3 p-4 border border-t-0 border-l-0 border-r-0 border-b-[#393f4f]"
 >
-    <a href={slug} class="flex">
+    <a href={slug} class="flex items-center">
         <span class="material-symbols-outlined pr-2">rss_feed</span>
         <span class="hidden md:block font-bold"> Blog</span>
     </a>
     <span class="material-symbols-outlined pl-2">chevron_right</span>
 
-    <a href={slug} class="flex">
+    <a href={slug} class="flex items-center">
         <span class="material-symbols-outlined pr-2">article</span>
         <span class="hidden md:block font-bold truncate"> {title}</span>
     </a>
