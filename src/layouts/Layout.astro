@@ -5,14 +5,19 @@ interface Props {
 }
 
 const { title = "Periodically Programming" } = Astro.props;
+const site_description =
+    "Tech blog and portfolio featuring articles on studying Computer Science and software engineering";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="Tech blog centered on college life, computer science, and more."
+        />
+        <meta name="i" <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
