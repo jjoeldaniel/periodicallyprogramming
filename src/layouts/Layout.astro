@@ -20,7 +20,9 @@ const { title = "Periodically Programming" } = Astro.props;
     <body>
         <div class="flex w-full md:pl-36">
             <div class="m-auto flex flex-row space-x-3 md:space-x-10 pt-4">
-                <slot />
+                <div class="md:w-[625px]">
+                    <slot />
+                </div>
                 <Nav />
             </div>
         </div>
