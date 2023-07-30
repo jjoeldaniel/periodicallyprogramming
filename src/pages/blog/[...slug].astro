@@ -20,6 +20,10 @@ const slug = "/blog/" + entry.slug;
     <main class="rounded-md bg-[#282c37] border-transparent ml-2">
         <BlogHeader slug={slug} title={entry.data.title} />
 
+        <h1 class="text-3xl font-bold text-center pt-5 pb-5">
+            {entry.data.title}
+        </h1>
+
         <div class="p-4">
             <div
                 class="prose prose-p:text-white prose-headings:text-white prose-a:text-[#8c8dff]"
