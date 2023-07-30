@@ -1,0 +1,24 @@
+---
+interface Props {
+    slug: string;
+    title: string;
+}
+
+const { slug, title } = Astro.props;
+---
+
+<div
+    class="text-lg flex items-center pt-3 pb-3 p-4 border border-t-0 border-l-0 border-r-0 border-b-[#393f4f]"
+>
+    <span class="material-symbols-outlined pr-2">
+        <a href="/blog">rss_feed</a></span
+    >
+    <a href="/blog">Blog</a>
+
+    <span class="material-symbols-outlined pl-2">chevron_right</span>
+
+    <span class="material-symbols-outlined pl-2"
+        ><a href={slug}>article</a></span
+    >
+    <a href={slug} class="pl-2 truncate">{title}</a>
+</div>

@@ -1,0 +1,46 @@
+---
+import Nav from "../components/Nav.astro";
+interface Props {
+    title: string;
+}
+
+const { title = "Periodically Programming" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div class="flex w-full md:pl-36 pb-10">
+            <div class="m-auto flex flex-row space-x-3 md:space-x-10 pt-4">
+                <div class="md:w-[625px] w-[335px]">
+                    <slot />
+                </div>
+                <Nav />
+            </div>
+        </div>
+        <script
+            is:inline
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+        ></script>
+    </body>
+</html>
+
+<style>
+    * {
+        color: #fff;
+        background-color: #191b22;
+    }
+</style>
+<style is:global>
+    a:hover {
+        color: #8c8dff;
+    }
+</style>
