@@ -23,6 +23,7 @@ const site_description =
         <title>{title}</title>
     </head>
     <body>
+        <!-- Desktop view -->
         <div class="hidden md:flex w-full md:pl-36 pb-10">
             <div class="m-auto flex flex-row space-x-3 md:space-x-10 pt-4">
                 <div class="md:w-[625px] w-[335px]">
@@ -31,7 +32,8 @@ const site_description =
                 <Nav />
             </div>
         </div>
-        <div class="md:hidden w-full pb-5">
+        <!-- Mobile view -->
+        <div class="md:hidden w-full pb-2">
             <div class="pt-3 pb-3">
                 <Nav />
             </div>
