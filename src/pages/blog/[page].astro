@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogPreview from "../../components/BlogPreview.astro";
+import Header from "../../components/Header.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({ paginate }) {
+    const posts = await getCollection("blog");
+
+    return paginate(posts, { pageSize: 3 });
+}
+
+const { page } = Astro.props;
+---
+
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
+/>
+
+<Layout title="Periodically Programming">
+    <main class="rounded-md bg-[#282c37] border-transparent ml-2">
+        <Header title="Blog" slug="/blog" icon="rss_feed" />
+
+        <div class="p-4 space-y-8">
+            {Astro.props.page.data.map((post) => <BlogPreview post={post} />)}
+        </div>
+
+        <div class="flex justify-between p-4">
+            {
+                Astro.props.page.url.prev ? (
+                    <a href={Astro.props.page.url.prev}>
+                        <button class="bg-[#8c8dff] hover:bg-[#3a3e4a] text-white font-bold py-2 px-4 rounded">
+                            Prev
+                        </button>
+                    </a>
+                ) : (
+                    <a href={Astro.props.page.url.prev}>
+                        <button class="bg-slate-400 opacity-50 cursor-not-allowed hover:bg-[#3a3e4a] text-white font-bold py-2 px-4 rounded">
+                            Prev
+                        </button>
+                    </a>
+                )
+            }
+            <span class="text-white font-bold py-2 px-4 rounded">
+                {Astro.props.page.currentPage} / {Astro.props.page.lastPage}
+            </span>
+            {
+                Astro.props.page.url.next ? (
+                    <a href={Astro.props.page.url.next}>
+                        <button class="bg-[#8c8dff] hover:bg-[#3a3e4a] text-white font-bold py-2 px-4 rounded">
+                            Next
+                        </button>
+                    </a>
+                ) : (
+                    <a href={Astro.props.page.url.next}>
+                        <button class="bg-slate-400 cursor-not-allowed opacity-50 hover:bg-[#3a3e4a] text-white font-bold py-2 px-4 rounded">
+                            Next
+                        </button>
+                    </a>
+                )
+            }
+        </div>
+    </main>
+</Layout>
