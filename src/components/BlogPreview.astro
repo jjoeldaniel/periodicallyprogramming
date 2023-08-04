@@ -24,4 +24,19 @@ const slug = "/blog/" + post.slug;
     <div class="line-clamp-2">
         {post.data.description}
     </div>
+
+    {
+        post.data.tags && (
+            <div class="flex flex-wrap">
+                {post.data.tags.map((tag) => (
+                    <a
+                        href={`/blog/tags/${tag}`}
+                        class="text-[#8c8dff] hover:text-[#8c8dff] mr-2"
+                    >
+                        #{tag}
+                    </a>
+                ))}
+            </div>
+        )
+    }
 </div>
