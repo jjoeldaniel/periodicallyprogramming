@@ -68,7 +68,9 @@ cargo run
 
 You should see the following output:
 
-`Hello, world!`
+```
+Hello, world!
+```
 
 Congratulations! You've just written your first Rust program. Let's build on this program and learn a bit more about Rust.
 
