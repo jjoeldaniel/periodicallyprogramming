@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import { getCollection } from "astro:content";
+import BlogPreview from "../components/BlogPreview.astro";
+
+const posts = await getCollection("blog");
+
+// TODO Sort posts by date and retrieve the last 2
+const recentPosts = posts.slice(0, 2);
 ---
 
 <link
@@ -12,14 +19,20 @@ import Header from "../components/Header.astro";
     <main class="rounded-md bg-[#282c37] border-transparent ml-2">
         <Header title="Home" slug="/" icon="home" />
 
-        <div class="p-4 space-y-6">
-            <h2 class="text-2xl font-bold text-center">About Me</h2>
-            <p>
+        <div class="flex flex-row place-content-center pt-5 pb-5">
+            <img src="/favicon.svg" class="place-self-center" />
+            <h1 class="text-3xl font-semibold place-self-center pl-4">
+                Periodically Programming
+            </h1>
+        </div>
+
+        <div class="p-4 space-y-8">
+            <p class="indent-4">
                 Hi there! I'm Joel, a computer science major at <strong>
                     California State University, Fullerton.
                 </strong>
             </p>
-            <div class="space-y-5">
+            <div class="space-y-6">
                 <p>
                     Welcome to my website! This serves as my digital portfolio
                     and contains my blog as well as all my projects. You can
@@ -34,14 +47,28 @@ import Header from "../components/Header.astro";
                 </p>
             </div>
 
-            <h2 class="text-2xl font-bold text-center">Contact</h2>
+            <h2 class="text-2xl font-bold text-center">Recent Posts</h2>
+            <div class="p-4 space-y-6">
+                {recentPosts.map((post) => <BlogPreview post={post} />)}
+            </div>
+
+            <h2 class="text-2xl pb-4 font-bold text-center">Contact</h2>
             <div class="grid pb-4 grid-cols-2 justify-items-center">
-                <a href="https://github.com/jjoeldaniel/">GitHub</a>
-                <a href="https://www.linkedin.com/in/joeldanielrico/"
+                <a
+                    class="bg-[#1f232b] border-transparent p-3 mb-4 font-semibold rounded-md"
+                    href="https://github.com/jjoeldaniel/">GitHub</a
+                >
+                <a
+                    class="bg-[#1f232b] border-transparent p-3 mb-4 font-semibold rounded-md"
+                    href="https://www.linkedin.com/in/joeldanielrico/"
                     >LinkedIn</a
                 >
-                <a href="https://mastodon.social/@jjoel">Mastadon</a>
                 <a
+                    class="bg-[#1f232b] border-transparent p-3 font-semibold rounded-md"
+                    href="https://mastodon.social/@jjoel">Mastadon</a
+                >
+                <a
+                    class="bg-[#1f232b] border-transparent p-3 font-semibold rounded-md"
                     href="https://github.com/jjoeldaniel/resume/blob/main/resume.pdf"
                     >Resume</a
                 >
