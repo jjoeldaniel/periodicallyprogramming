@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { getCollection } from "astro:content";
+import BlogPreview from "../components/BlogPreview.astro";
+
+const posts = await getCollection("blog");
+
+// TODO Sort posts by date and retrieve the last 2
+const recentPosts = posts.slice(0, 2);
+---
+
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
+/>
+
+<Layout title="Periodically Programming">
+    <main class="rounded-md bg-[#282c37] border-transparent ml-2">
+        <Header title="Home" slug="/" icon="home" />
+
+        <div class="p-8 pb-12 flex flex-col items-center text-3xl text-center">
+            <p>⚠️</p>
+            <p>Uh oh, this page doesn't exist yet! Check back later.</p>
+        </div>
+    </main>
+</Layout>
