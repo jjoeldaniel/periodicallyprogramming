@@ -1,5 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
     title: string;
 }
@@ -21,6 +23,7 @@ const site_description =
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <ViewTransitions />
     </head>
     <body>
         <!-- Desktop view -->
@@ -45,17 +48,15 @@ const site_description =
             is:inline
             src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
         ></script>
-    </body>
+    </body><style>
+        * {
+            color: #fff;
+            background-color: #191b22;
+        }
+    </style>
+    <style is:global>
+        a:hover {
+            color: #8c8dff;
+        }
+    </style>
 </html>
-
-<style>
-    * {
-        color: #fff;
-        background-color: #191b22;
-    }
-</style>
-<style is:global>
-    a:hover {
-        color: #8c8dff;
-    }
-</style>
