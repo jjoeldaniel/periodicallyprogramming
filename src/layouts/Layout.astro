@@ -15,6 +15,9 @@ const navLinks = [
 ];
 
 const NAME = "Joel Daniel Rico";
+
+import { Image } from "astro:assets";
+import favicon from "/public/favicon.svg";
 ---
 
 <!doctype html>
@@ -37,7 +40,14 @@ const NAME = "Joel Daniel Rico";
             <nav
                 class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center"
             >
-                <div class="text-2xl font-bold text-cyan-400 mb-4 sm:mb-0">
+                <div
+                    class="flex flex-row space-x-3 text-2xl hover:font-bold font-semibold text-cyan-400 mb-4 sm:mb-0"
+                >
+                    <Image
+                        class="w-8 rounded-full mx-auto object-cover shadow-lg"
+                        src={favicon}
+                        alt=`${NAME} - Avatar`
+                    />
                     <a href="/">{NAME}</a>
                 </div>
                 <ul class="flex space-x-4 sm:space-x-6">
