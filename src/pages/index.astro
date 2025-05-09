@@ -1,76 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import { getCollection } from "astro:content";
-import BlogPreview from "../components/BlogPreview.astro";
-
-const posts = await getCollection("blog");
-
-// TODO Sort posts by date and retrieve the last 2
-const recentPosts = posts.slice(0, 2);
+import { Image } from "astro:assets";
+import joelpic from "../images//joel.png";
+const NAME_SHORT = "Joel";
+const NAME = "Joel Daniel Rico";
 ---
 
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
-/>
+<Layout title="Home" currentPage="Home">
+    <section id="hero" class="text-center py-12 md:py-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-8">
+                <Image
+                    class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-cyan-500 shadow-lg"
+                    src={joelpic}
+                    alt=`${NAME} - Avatar`
+                />
+            </div>
 
-<Layout title="Periodically Programming">
-    <main class="rounded-md bg-[#282c37] border-transparent ml-2">
-        <Header title="Home" slug="/" icon="home" />
-
-        <div class="flex flex-row place-content-center pt-5 pb-5">
-            <img src="/favicon.svg" class="place-self-center" />
-            <h1 class="text-3xl font-semibold place-self-center pl-4">
-                Periodically Programming
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+                Hi, I'm <span class="text-cyan-400">{NAME_SHORT}</span>
             </h1>
-        </div>
 
-        <div class="p-4 space-y-8">
-            <p class="indent-4">
-                Hi there! I'm Joel, a computer science major at <strong>
-                    California State University, Fullerton.
-                </strong>
+            <p class="text-xl sm:text-2xl text-slate-300 mb-6">
+                A Passionate Software Engineer Crafting Digital Experiences.
             </p>
-            <div class="space-y-6">
+
+            <div
+                class="text-md sm:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto space-y-4"
+            >
                 <p>
-                    Welcome to my website! This serves as my digital portfolio
-                    and contains my blog as well as all my projects. You can
-                    expect to find in-depth tutorials, insightful articles, and
-                    updates on my latest projects right here on
-                    periodicallyprogramming.
-                </p>
-                <p>
-                    I hope you find my blog and projects interesting and
-                    informative. Don't hesitate to reach out if you have any
-                    questions or suggestions. Happy coding!
+                    Welcome to my personal corner of the web! Feel free to
+                    explore my work and learn more about my journey.
                 </p>
             </div>
 
-            <h2 class="text-2xl font-bold text-center">Recent Posts</h2>
-            <div class="md:p-4 space-y-6">
-                {recentPosts.map((post) => <BlogPreview post={post} />)}
-            </div>
-
-            <h2 class="text-2xl pb-4 font-bold text-center">Contact</h2>
-            <div class="grid pb-4 grid-cols-2 justify-items-center">
+            <div class="mt-10">
                 <a
-                    class="bg-[#1f232b] border-transparent p-3 mb-4 font-semibold rounded-md"
-                    href="/github">GitHub</a
+                    href="/contact/"
+                    class="ml-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-slate-900 font-semibold py-3 px-8 rounded-lg shadow-md transition-colors duration-300 text-lg"
                 >
-                <a
-                    class="bg-[#1f232b] border-transparent p-3 mb-4 font-semibold rounded-md"
-                    href="/linkedin">LinkedIn</a
-                >
-                <a
-                    class="bg-[#1f232b] border-transparent p-3 font-semibold rounded-md"
-                    href="/mastadon">Mastadon</a
-                >
-                <a
-                    class="bg-[#1f232b] border-transparent p-3 font-semibold rounded-md"
-                    href="/resume">Resume</a
-                >
+                    Get in Touch
+                </a>
             </div>
         </div>
-    </main>
+    </section>
 </Layout>

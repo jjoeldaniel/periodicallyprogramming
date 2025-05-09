@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Contact";
+const currentPageLabel = "Contact";
+const emailRecipient = "joeldanielrico@gmail.com";
+---
+
+<Layout title={pageTitle} currentPage={currentPageLabel}>
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400">
+                    {pageTitle}
+                </h1>
+                <p class="mt-2 text-lg text-slate-400">
+                    Have a question or want to work together? Fill out the form
+                    below, and it will open your default email client!
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 sm:p-8 rounded-lg shadow-xl">
+                <div
+                    class="prose prose-invert max-w-none lg:prose-lg text-slate-300 leading-relaxed space-y-6"
+                >
+                    <form
+                        id="contactFormAstro"
+                        action={`mailto:${emailRecipient}`}
+                        class="space-y-6"
+                    >
+                        <div
+                            class="grid grid-cols-[max-content_1fr] items-center gap-x-3 sm:gap-x-4"
+                        >
+                            <label
+                                for="name-astro"
+                                class="text-sm font-medium text-slate-200 whitespace-nowrap"
+                                >Your Name</label
+                            >
+                            <input
+                                type="text"
+                                name="name"
+                                id="name-astro"
+                                required
+                                class="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-slate-100 rounded-md shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 placeholder-slate-400 transition-colors duration-150"
+                                placeholder="John Doe"
+                            />
+                        </div>
+
+                        <div
+                            class="grid grid-cols-[max-content_1fr] items-center gap-x-3 sm:gap-x-4"
+                        >
+                            <label
+                                for="subject-astro"
+                                class="text-sm font-medium text-slate-200 whitespace-nowrap"
+                                >Subject</label
+                            >
+                            <input
+                                type="text"
+                                name="subject"
+                                id="subject-astro"
+                                required
+                                class="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-slate-100 rounded-md shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 placeholder-slate-400 transition-colors duration-150"
+                                placeholder="Project Inquiry"
+                            />
+                        </div>
+
+                        <div
+                            class="grid grid-cols-[max-content_1fr] items-start gap-x-3 sm:gap-x-4"
+                        >
+                            {/* items-start for textarea label alignment */}
+                            <label
+                                for="message_body-astro"
+                                class="text-sm font-medium text-slate-200 whitespace-nowrap pt-[calc(0.625rem)]"
+                                >Message</label
+                            >
+                            <textarea
+                                name="message_body"
+                                id="message_body-astro"
+                                rows="5"
+                                required
+                                class="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-slate-100 rounded-md shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 placeholder-slate-400 transition-colors duration-150"
+                                placeholder="Hi Joel, I'd like to discuss..."
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <button
+                                type="submit"
+                                class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+                            >
+                                Send Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script define:vars={{ emailRecipient }}>
+    const contactForm = document.getElementById("contactFormAstro");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById("name-astro").value;
+            const subjectInput = document.getElementById("subject-astro");
+            const messageInput = document.getElementById("message_body-astro");
+
+            const subject = subjectInput ? subjectInput.value : "";
+            const name = nameInput;
+            const message =
+                (messageInput ? messageInput.value : "") +
+                "\n\n" +
+                "Sent from: " +
+                name;
+
+            const mailtoSubject = encodeURIComponent(subject);
+            const mailtoBody = encodeURIComponent(message);
+
+            const mailtoLink = `mailto:${emailRecipient}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+            window.location.href = mailtoLink;
+        });
+    }
+</script>

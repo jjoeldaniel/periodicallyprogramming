@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About";
+const currentPageLabel = "About";
+---
+
+<Layout title={pageTitle} currentPage={currentPageLabel}>
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400">
+                    {pageTitle}
+                </h1>
+                <p class="mt-2 text-lg text-slate-400">
+                    Here's some info about me!
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 sm:p-8 rounded-lg shadow-xl">
+                <div
+                    class="prose prose-invert max-w-none lg:prose-lg text-slate-300 leading-relaxed space-y-6"
+                >
+                    <h2
+                        class="text-2xl font-semibold text-cyan-300 border-b border-slate-700 pb-2"
+                    >
+                        Background
+                    </h2>
+                    <p>
+                        I'm current a junior at California State University,
+                        Fullerton studying Computer Science. When not studying,
+                        working, or in class, you'll usually find me hanging out
+                        with my friends! I will be working as a Software
+                        Engineer intern at ESRI at the ArcGIS Notebooks team!
+                    </p>
+
+                    <h2
+                        class="text-2xl font-semibold text-cyan-300 border-b border-slate-700 pb-2 mt-8"
+                    >
+                        Education
+                    </h2>
+
+                    <div class="grid grid-flow-row md:grid-cols-5 gap-6 mt-6">
+                        <div
+                            class="bg-slate-700 p-4 rounded-md shadow col-span-3"
+                        >
+                            <div class="md:grid grid-cols-2 col-span-2">
+                                <h3 class="font-semibold text-cyan-400 md:mb-3">
+                                    California State University, Fullerton
+                                </h3>
+                                <div>
+                                    <p
+                                        class="hidden md:block text-sm text-slate-400 mt-1 text-right"
+                                    >
+                                        Fullerton, CA
+                                    </p>
+                                    <p
+                                        class="hidden md:block text-sm text-slate-400 mt-1 text-right"
+                                    >
+                                        2022-2026
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-slate-400 mt-1">
+                                Bachelors of Science in Computer Science
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-slate-700 p-4 rounded-md shadow col-span-2"
+                        >
+                            <a
+                                href="https://github.com/jjoeldaniel/resume/blob/main/resume.pdf"
+                                target="_blank"
+                            >
+                                <h3
+                                    class="hover:font-extrabold font-semibold text-cyan-400"
+                                >
+                                    Resume
+                                </h3>
+                            </a>
+                            <p class="text-sm text-slate-400 mt-1">
+                                Feel free to check out my resume for more
+                                in-depth information!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
