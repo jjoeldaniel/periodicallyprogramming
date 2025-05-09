@@ -1,62 +1,102 @@
 ---
-import Nav from "../components/Nav.astro";
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
     title: string;
+    currentPage?: string;
 }
 
-const { title = "Periodically Programming" } = Astro.props;
-const site_description =
-    "Tech blog and portfolio featuring articles on studying Computer Science and software engineering";
+const { title, currentPage } = Astro.props;
+
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about/", label: "About" },
+    { href: "/projects/", label: "Projects" },
+    { href: "/skills/", label: "Skills" },
+    { href: "/contact/", label: "Contact" },
+];
+
+const NAME = "Joel Daniel Rico";
+
+import { Image } from "astro:assets";
+import favicon from "/public/favicon.svg";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="description"
-            content="Tech blog centered on college life, computer science, and more."
-        />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        <ViewTransitions />
+        <title>{title} - My Portfolio</title>
+        <meta
+            name="description"
+            content="A personal portfolio website showcasing skills and projects."
+        />
     </head>
-    <body>
-        <!-- Desktop view -->
-        <div class="hidden md:flex w-full md:pl-36 pb-10">
-            <div class="m-auto flex flex-row space-x-3 md:space-x-10 pt-4">
-                <div class="md:w-[625px] w-[335px]">
-                    <slot />
+    <body
+        class="bg-slate-900 text-slate-100 font-sans antialiased flex flex-col min-h-screen"
+    >
+        <header class="bg-slate-800 shadow-lg sticky top-0 z-50">
+            <nav
+                class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center"
+            >
+                <div
+                    class="flex flex-row space-x-3 text-2xl hover:font-bold font-semibold text-cyan-400 mb-4 sm:mb-0"
+                >
+                    <Image
+                        class="w-8 rounded-full mx-auto object-cover shadow-lg"
+                        src={favicon}
+                        alt=`${NAME} - Avatar`
+                    />
+                    <a href="/">{NAME}</a>
                 </div>
-                <Nav />
+                <ul class="flex space-x-4 sm:space-x-6">
+                    {
+                        navLinks.map((link) => (
+                            <li>
+                                <a
+                                    href={link.href}
+                                    class:list={[
+                                        "hover:text-cyan-400 transition-colors duration-300",
+                                        {
+                                            "text-cyan-400 font-semibold border-b-2 border-cyan-400 pb-1":
+                                                currentPage === link.label,
+                                        },
+                                        {
+                                            "text-slate-300":
+                                                currentPage !== link.label,
+                                        },
+                                    ]}
+                                >
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+        </header>
+
+        <main
+            class="flex-grow container mx-auto px-6 py-8 md:py-12 md:max-w-4xl"
+        >
+            <slot />
+        </main>
+
+        <footer class="bg-slate-800 text-slate-400 py-6 text-center">
+            <div class="container mx-auto px-6">
+                <p>
+                    &copy; {new Date().getFullYear()}
+                    {NAME}. All rights reserved.
+                </p>
+                <p class="text-sm mt-1">Built with ❤️</p>
             </div>
-        </div>
-        <!-- Mobile view -->
-        <div class="md:hidden w-full pb-2">
-            <div class="pt-3 pb-3">
-                <Nav />
-            </div>
-            <div class="mr-3">
-                <slot />
-            </div>
-        </div>
-        <script
-            is:inline
-            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-        ></script>
-    </body><style>
-        * {
-            color: #fff;
-            background-color: #191b22;
-        }
-    </style>
+        </footer>
+    </body>
+
     <style is:global>
-        a:hover {
-            color: #8c8dff;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </html>

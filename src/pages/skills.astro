@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Skills";
+const currentPageLabel = "Skills";
+---
+
+<Layout title={pageTitle} currentPage={currentPageLabel}>
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400">
+                    {pageTitle}
+                </h1>
+                <p class="mt-2 text-lg text-slate-400">
+                    Here's some technology I'm particularly fond of!
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 sm:p-8 rounded-lg shadow-xl">
+                <div
+                    class="prose prose-invert max-w-none lg:prose-lg text-slate-300 leading-relaxed space-y-6"
+                >
+                    <h2
+                        class="text-2xl font-semibold text-cyan-300 border-b border-slate-700 pb-2"
+                    >
+                        Technical Skills
+                    </h2>
+                    <div class="space-y-3 text-sm sm:text-base">
+                        <p class="text-slate-300">
+                            <strong class="font-semibold text-slate-100"
+                                >Languages:</strong
+                            > Python, Rust, C++, Java, Bash, R, JavaScript, TypeScript,
+                            SQL (Postgres, SQLite), HTML, CSS
+                        </p>
+                        <p class="text-slate-300">
+                            <strong class="font-semibold text-slate-100"
+                                >Tools:</strong
+                            > Git, Docker, Flask, FastAPI, Svelte, SvelteKit, Astro,
+                            Tailwind CSS
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

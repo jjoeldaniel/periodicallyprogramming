@@ -1,19 +1,89 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+
+const pageTitle = "Projects";
+const currentPageLabel = "Projects";
 ---
 
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
-/>
+<Layout title={pageTitle} currentPage={currentPageLabel}>
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400">
+                    {pageTitle}
+                </h1>
+                <p class="mt-2 text-lg text-slate-400">
+                    Here's some info about projects I've worked on!
+                </p>
+            </div>
 
-<Layout title="Periodically Programming">
-    <main class="rounded-md bg-[#282c37] border-transparent ml-2">
-        <Header title="Projects" slug="/projects" icon="star" />
+            <div class="mb-8 bg-slate-800/50 p-6 sm:p-8 rounded-lg shadow-xl">
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1"
+                >
+                    <h3 class="text-xl font-semibold text-slate-100">
+                        Trends Analysis | <span
+                            class="text-sm font-normal text-sky-300"
+                            >Python, Rust</span
+                        >
+                    </h3>
+                    <p class="text-sm text-slate-400 mt-1 sm:mt-0">
+                        Jan. 2022 - June 2023
+                    </p>
+                </div>
+                <ul
+                    class="list-disc list-outside ml-5 text-slate-300 space-y-1 text-sm sm:text-base"
+                >
+                    <li>
+                        Identified key trends and patterns in user activity,
+                        including peak hours of usage, most popular channels,
+                        and frequently used words and phrases.
+                    </li>
+                    <li>
+                        Utilized a Bidirectional Encoder Representations from
+                        Transformers (BERT) model library to extract relevant
+                        keywords from Discord messages.
+                    </li>
+                    <li>
+                        Extracted relevant data using Discord API and web
+                        scraping techniques to collect information on user
+                        activity, message content, and channel usage.
+                    </li>
+                    <li>
+                        Visualized data using charts, graphs, and other
+                        visualization tools to highlight trends and patterns in
+                        user behavior.
+                    </li>
+                </ul>
+            </div>
 
-        <div class="p-4 space-y-8">
-            <h1 class="text-3xl font-bold">Projects</h1>
+            <div class="mb-8 bg-slate-800/50 p-6 sm:p-8 rounded-lg shadow-xl">
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1"
+                >
+                    <h3 class="text-xl font-semibold text-slate-100">
+                        genius.py | <span
+                            class="text-sm font-normal text-sky-300"
+                            >Python, Web Scraping</span
+                        >
+                    </h3>
+                    <p class="text-sm text-slate-400 mt-1 sm:mt-0">
+                        Jan. 2023 - April 2023
+                    </p>
+                </div>
+                <ul
+                    class="list-disc list-outside ml-5 text-slate-300 space-y-1 text-sm sm:text-base"
+                >
+                    <li>
+                        Python-based Genius API wrapper enabling users to search
+                        for and retrieve lyrics and other song-related data.
+                    </li>
+                    <li>
+                        Published on Python Package Index (PyPI), resulting in
+                        over 25,000 downloads.
+                    </li>
+                </ul>
+            </div>
         </div>
-    </main>
+    </section>
 </Layout>
